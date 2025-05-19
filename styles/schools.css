@@ -1,0 +1,47 @@
+#formations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 700px){
+
+    #formations{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#formations div{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/* Style du titre */
+#formations div h2, #formations div p {
+    margin: 10px 0 0 10px;
+}
+
+#formations div h2{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+/* Logo en haut à droite */
+#formations div img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: auto;
+    padding: 10px;
+}

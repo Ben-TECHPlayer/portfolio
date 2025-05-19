@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Compétences</title>
+        <link rel="stylesheet" href="./styles/skills.css">
+        <link rel="stylesheet" href="./styles/portfolio.css">
+        <script src="./scripts/script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="menu-container">
+                <div class="menu" onclick="toggleMenu()">
+                    <img src="./images/menu.png" alt="Menu">
+                    <span>Menu</span>
+                </div>
+            
+                <div id="dropdown" class="dropdown-menu">
+                    <ul>
+                        <li><a href="./portfolio.html">Accueil</a></li>
+                        <li><a href="./about.html">À propos de moi</a></li>
+                        <li><a href="./schools.html">Formations</a></li>
+                        <li><a href="./skills.html">Compétences</a></li>
+                        <li><a href="./projects.html">Projets informatiques</a></li>
+                        <li><a href="./work.html">Expériences professionnelles</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1>Portfolio</h1>
+        </header>
+        <main>
+            <nav class="filtres">
+                <ul>
+                    <li><a href="#" onclick="showSection('hardskills')">Hard skills</a></li>
+                    <li><a href="#" onclick="showSection('softskills')">Soft skills</a></li>
+                </ul>
+            </nav>
+            <article id="hardskills">
+                <div>
+                    <h2>Site web</h2>
+                    <p>HTML</br>CSS</br>JavaScript</br>PHP</p>
+                </div>
+                <div>
+                    <h2>Environnement de travail(IDE)</h2>
+                    <p>Visual Studio</br>VSCodium</br>Visual Studio 2022</br>Android Studio</br>Eclipse</br>CodeBlocks</br>SQLDeveloper</br>DB Browser for SQLite</p>
+                </div>
+                <div>
+                    <h2>Programmation</h2>
+                    <p>C++, Java, C#, ASM</p> 
+                </div>
+                <div>
+                    <h2>Développement d'application</h2>
+                    <p>Java(Android Studio), Kotlin, C# WPF</p> 
+                </div>
+                <div>
+                    <h2>Bases de données</h2>
+                    <p>PL/SQL</br>MySQL(terminal)</br>SQL</p>
+                </div>
+                <div>
+                    <h2>Langues</h2>
+                    <p>Français(langue maternelle)</br>Anglais(B1)</br>Espagnol(A2+)</p>
+                </div>
+                <div>
+                    <h2>Réseaux</h2>
+                    <p>Linux</br>Marionnet</p>
+                </div>
+                <div>
+                    <h2>UX Design</h2>
+                    <p>Figma</br>Penpot</br>Illustrator</p>
+                </div>
+                <div>
+                    <h2>DevOps</h2>
+                    <p>GitLab</br>GitHub</p>
+                </div>
+                <div>
+                    <h2>Autres</h2>
+                    <p>Mathématiques</br>orthographe</br>grammaire</p>
+                </div>
+            </article>
+            <article id="softskills">
+                <div>
+                    <h2>Comportement</h2>
+                    <p>Assidu</br>Ponctuel</br>Discipliné</p>
+                </div>
+                <div>
+                    <h2>Gestion du temps</h2>
+                    <p>Organisé</br>Ouvert d'esprit</p>
+                </div>
+            </article>
+        </main>
+        <footer>
+                <h1>Contact</h1>
+                <div class="contact-icons">
+                    <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>
+                    <a href="http://www.linkedin.com/in/ben-ali-aboudou-9a412b269/"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/Ben-TECHPlayer"><img src="./images/github.png" alt="GitHub"></a>
+                    <a href="https://git.iut-orsay.fr/baboudo"> <img src="./images/gitlab.png" alt="GitLab"></a>
+                    <a href="https://youtube.fr/@Ben_CR7"> <img src="./images/youtube.png" alt="Youtube"></a> 
+                </div>
+        </footer>
+    </body>
+</html>

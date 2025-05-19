@@ -1,0 +1,64 @@
+#but, #every, #sti2d, #home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    padding: 10px;
+}
+
+#but div, #every div, #sti2d div, #home div {
+    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
+    display: flex;
+    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#but div img, #every div img, #sti2d div img, #home div img {
+    width: 100%;
+    height: auto;
+}
+
+#but h2 {
+    text-align: left; /* Aligner le titre à gauche */
+    margin-bottom: 10px;
+}
+
+/* #panel img {
+    position: absolute; 
+    top: 20px; 
+    right: 10px;
+    width: 250px; 
+    height: auto;
+} */
+
+#but p {
+    text-align: left; /* Aligner les paragraphes à gauche */
+    margin-top: 10px;
+}
+
+#home, #sti2d, #but {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    #every, #but, #home, #sti2d {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #every, #but, #home, #sti2d {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filtres ul{
+        flex-direction: column;
+    }
+}

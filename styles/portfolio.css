@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+header h1{
+    color: #b2995a;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    header h1{
+        margin-left: 8.4rem;
+        text-align: center;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-container {
+    position: absolute;
+    float: left;
+}
+
+.menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #b2995a;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+    /* width: 200px; */
+}
+
+.dropdown-menu.open {
+    max-height: 500px; /* Ajuste selon le contenu */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+.dropdown-menu li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #b2995a;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+li{
+    margin: 5px; 
+    text-align: center;
+}
+
+nav li {
+    padding: 10px 20px;       /* Ajuste la taille des boutons */
+    border: 1px solid #b2995a;  /* Bordure pour créer des rectangles */
+    background-color: #fff;   /* Couleur de fond des boutons */
+    border-radius: 5px;       /* Coins légèrement arrondis pour chaque bouton */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ajoute une petite ombre pour l'effet bouton */
+    transition: background-color 0.3s ease; /* Transition pour effet au survol */
+}
+
+nav a {
+    text-decoration: none;  /* Retire le soulignement des liens */
+    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Optionnel : soulignement au survol si souhaité */
+}
+
+.menu{
+    float: left;
+    margin-left: 20px;
+}
+
+#panel{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    grid-template-rows: repeat(2, auto);   /* 2 lignes, hauteur automatique */
+    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media(max-width: 720px) {
+    #panel{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
+        grid-template-rows: repeat(3, auto);   /* 2 lignes, hauteur automatique */
+        gap: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+#panel div { 
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    height: 300px;            /* Taille des carrés (ajustez la hauteur selon vos besoins) */
+    border: 1px solid #ddd;   /* Optionnel : ajouter une bordure pour voir les carrés */
+}   
+
+.school{
+    background-image: url(../images/school.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.it{
+    background-image: url(../images/hardskills.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lesson{
+    background-image: url(../images/teamwork.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.projects{
+    background-image: url(../images/webproject.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.money{
+    background-image: url(../images/work.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.chill{
+    background-image: url(../images/cr7.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 10%;
+    height: 5%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column; /* Aligner le texte et les images verticalement */
+    align-items: center; /* Centrer le contenu */
+    padding: 10px;
+}
+
+footer h1 {
+    color: #0000FF;
+    text-align: center;
+    margin-bottom: 20px; /* Ajoute de l'espace entre le texte et les images */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centrer les icônes horizontalement */
+    gap: 20px; /* Espacement entre les icônes */
+}
+
+.contact-icons img {
+    width: 50px; /* Taille des images */
+    height: auto;
+}
