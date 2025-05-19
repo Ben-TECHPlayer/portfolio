@@ -1,0 +1,19 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.log
+*.tmp
+
+# Node.js (au cas où tu ajoutes des outils JS plus tard)
+node_modules/
+
+# IDEs et éditeurs
+.vscode/
+.idea/
+
+# Déploiement (si tu utilises Netlify/Vercel plus tard)
+dist/
+build/
+.env
