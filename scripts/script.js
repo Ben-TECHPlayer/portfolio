@@ -1,6 +1,7 @@
 function toggleMenu() {
     const dropdown = document.getElementById("dropdown");
     dropdown.classList.toggle("open");
+    dropdown.style.width = menuButton.offsetWidth + 'px';
 
     document.addEventListener("click", function(event) {
         const menu = document.querySelector(".menu");
