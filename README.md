@@ -5,7 +5,7 @@ Bienvenue sur le dépôt GitHub de mon **portfolio web personnel**. Ce site vitr
 ## 🌐 Aperçu
 
 Ce site est composé de plusieurs pages HTML :
-- `portfolio.html` : Page de garde pour mon site web
+- `index.html` : Page de garde pour mon site web
 - `about.html` : Présentation personnelle
 - `schools.html` : Parcours scolaire
 - `projects.html` : Présentation de mes projets académiques et personnels avec détails
