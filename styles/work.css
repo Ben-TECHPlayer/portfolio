@@ -3,14 +3,14 @@
     height: auto;
 } */
 
-#works, #salons, #internship {
+#works, #salons, #internship, #full-time {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
     gap: 20px; /* Espace entre les colonnes */
     padding: 10px;
 }
 
-#works div, #salons div, #internship div {
+#works div, #salons div, #internship div, #full-time div {
     position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
     display: flex;
     flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
@@ -22,7 +22,7 @@
     padding: 20px;
 }
 
-#works img, #salons img, #internship img {
+#works img, #salons img, #internship img, #full-time img {
    /* position: absolute;
     top: 20px;
     right: 10px; */
@@ -31,13 +31,13 @@
 }
 
 @media (max-width: 1300px) {
-    #works, #salons, #internship {
+    #works, #salons, #internship, #full-time {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 850px) {
-    #works, #salons, #internship {
+    #works, #salons, #internship, #full-time {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -48,6 +48,6 @@
     }
 }
 
-#salons, #internship {
+#salons, #internship, #full-time {
 	display: none;
 }
