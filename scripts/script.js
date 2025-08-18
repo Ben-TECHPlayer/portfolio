@@ -24,6 +24,7 @@ function showSection(sectionId) {
     const work = document.getElementById('works');
     const salon = document.getElementById('salons');
     const intern = document.getElementById('internship');
+    const jobs = document.getElementById('full-time');
 
 
     if (sectionId === 'hardskills') {
@@ -56,13 +57,21 @@ function showSection(sectionId) {
         work.style.display = 'grid';
         salon.style.display = 'none';
         intern.style.display = 'none';
+        jobs.style.display = 'none';
     } else if (sectionId === 'salons') {
         work.style.display = 'none';
         salon.style.display = 'grid';
         intern.style.display = 'none';
+        jobs.style.display = 'none';
     } else if (sectionId === 'internship') {
         work.style.display = 'none';
         salon.style.display = 'none';
         intern.style.display = 'grid';
+        jobs.style.display = 'none';
+    } else if (sectionId === 'full-time') {
+        work.style.display = 'none';
+        salon.style.display = 'none';
+        intern.style.display = 'none';
+        jobs.style.display = 'grid';
     }
 }
