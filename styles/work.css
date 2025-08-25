@@ -1,7 +1,33 @@
-/* img{
-    width: 100%;
-    height: auto;
-} */
+.filtres{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.filtres button{
+    padding: 15px;
+    border-radius: 2px;
+    border: none;
+    background: none;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.filtres button a {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;  /* Retire le soulignement des liens */
+    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
+}
+
+.filtres button:hover {
+    color: greenyellow;
+    transition: ease-in 0.3s;
+}
+
+.filtres button:active {
+    color: greenyellow;
+}
 
 #works, #salons, #internship, #full-time {
     display: grid;
@@ -16,10 +42,11 @@
     flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
     justify-content: flex-start; /* Aligner le contenu en haut */
     align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
+    background-color: aliceblue;
 }
 
 #works img, #salons img, #internship img, #full-time img {

@@ -1,7 +1,13 @@
-body {
+html {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body{
+    background-image: url(../images/gtaVI.png);
+    background-size: auto;
+    /* background-repeat: no-repeat; */
 }
 
 header h1{
@@ -12,123 +18,50 @@ header h1{
 @media (max-width: 700px) {
     header h1{
         margin-left: 8.4rem;
-        text-align: center;
+        text-align: left;
     }
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-}
-
-.menu-container {
-    position: absolute;
-    float: inline-block;
-}
-
-.menu {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: white;
-    padding: 10px 15px;
-    border: 1px solid #b2995a;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-weight: bold;
-}
-
-.menu img {
-    width: 30px;
-    height: 30px;
-}
-
-.dropdown-menu {
-    position: absolute;
-    width: max-content;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
-    z-index: 999;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    /* width: 200px; */
-}
-
-.dropdown-menu.open {
-    max-height: 500px; /* Ajuste selon le contenu */
-}
-
-.dropdown-menu ul {
-    display: contents; /* Corrige display: contents */
-    width: 100%;
-}
-
-.dropdown-menu li {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-
-.dropdown-menu li:last-child {
-    border-bottom: none;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.dropdown-menu a:hover {
-    background-color: #b2995a;
-    color: white;
-}
-
-ul {
-    list-style-type: none;
+.header-container{
     display: flex;
     flex-direction: row;
-    padding: 0;
+    gap: 2rem;
+    justify-content: space-around;
 }
 
-li{
-    margin: 5px; 
-    text-align: center;
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
 }
 
-nav li {
-    padding: 10px 20px;       /* Ajuste la taille des boutons */
-    border: 1px solid #b2995a;  /* Bordure pour créer des rectangles */
-    background-color: #fff;   /* Couleur de fond des boutons */
-    border-radius: 5px;       /* Coins légèrement arrondis pour chaque bouton */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Ajoute une petite ombre pour l'effet bouton */
-    transition: background-color 0.3s ease; /* Transition pour effet au survol */
+.menu button.active {
+    color: cyan;
 }
 
-nav a {
+.menu button{
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: none;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.menu button a {
+    font-weight: 500;
+    font-size: 18px;
     text-decoration: none;  /* Retire le soulignement des liens */
     color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
 }
 
-nav a:hover {
-    text-decoration: underline; /* Optionnel : soulignement au survol si souhaité */
+.menu button a:hover {
+    color: cyan;
+    transition: ease-in 0.3s;
 }
 
-.menu{
-    float: left;
-    margin-left: 20px;
+.menu button a:active {
+    color: cyan;
 }
 
 #panel{
@@ -215,19 +148,25 @@ img{
     gap: 20px;
 }
 
-#embauche .pitch, #embauche .cv {
+#embauche .ux-design, #embauche .cv {
     flex: 1;
     min-width: 300px; /* pour éviter que ça devienne trop petit */
 }
-#embauche video, #embauche iframe {
-    width: 100%;
-    height: 500px; /* Fixe une bonne hauteur */
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+#embauche .cv a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
+#embauche .cv a, #embauche .ux-design a{
+    font-weight: 600;
+}
 
-#ux-design a{
+#embauche .ux-design a{
     display: block;
     margin-left: 20px;
     text-decoration: none;
@@ -236,7 +175,7 @@ img{
     color: black;
 }
 
-#ux-design a:hover{
+#embauche .ux-design a:hover, #embauche .cv a:hover{
     color: #b2995a;
 }
 
@@ -248,7 +187,7 @@ footer {
 }
 
 footer h1 {
-    color: #0000FF;
+    color: cyan;
     text-align: center;
     margin-bottom: 20px; /* Ajoute de l'espace entre le texte et les images */
 }

@@ -1,9 +1,10 @@
 .panel{
-    box-shadow: 0 0 20px rgba(0.3, 0.3, 0.3, 0.3);
+    box-shadow: 0 0 20px black;
     padding: 20px;
     border-radius: 1px;
     gap: 5px;
     margin: 10px;
+    background-color: aliceblue;
 }
 
 .panel h1{

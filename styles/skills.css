@@ -1,40 +1,33 @@
-/* #panel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
-    padding: 10px;
-}
-
-#panel div {
-    position: relative; 
+.filtres{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
 }
 
-#panel h2 {
-    color: #b2995a;
-    text-align: left; 
-    margin-bottom: 10px;
+.filtres button{
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: none;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#panel img {
-    position: absolute; 
-    top: 20px; 
-    right: 10px; 
-    width: 250px; 
-    height: auto;
+.filtres button a {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;  /* Retire le soulignement des liens */
+    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
 }
 
-#panel p {
-    text-align: left; 
-    margin-top: 10px;
-} */
+.filtres button:hover {
+    color: greenyellow;
+    transition: ease-in 0.3s;
+}
+
+.filtres button:active {
+    color: greenyellow;
+}
 
 #hardskills, #softskills {
     display: grid;
@@ -49,10 +42,11 @@
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-start;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
+    background-color: aliceblue;
     /*height: auto;
      min-height: 150px; */
 }

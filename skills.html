@@ -10,31 +10,22 @@
 
     <body>
         <header>
-            <div class="menu-container">
-                <div class="menu" onclick="toggleMenu()">
-                    <img src="./images/menu.png" alt="Menu">
-                    <span>Menu</span>
-                </div>
-            
-                <div id="dropdown" class="dropdown-menu">
-                    <ul>
-                        <li><a href="./index.html">Accueil</a></li>
-                        <li><a href="./about.html">À propos de moi</a></li>
-                        <li><a href="./schools.html">Formations</a></li>
-                        <li><a href="./skills.html">Compétences</a></li>
-                        <li><a href="./projects.html">Projets informatiques</a></li>
-                        <li><a href="./work.html">Expériences professionnelles</a></li>
-                    </ul>
+            <div class="header-container">
+                <h1>Ben.</h1>
+                <div class="menu">
+                    <button><a href="./portfolio.html">Accueil</a></button>
+                    <button><a href="./about.html">À propos de moi</a></button>
+                    <button><a href="./schools.html">Formations</a></button>
+                    <button class="active"><a href="./skills.html">Compétences</a></button>
+                    <button><a href="./projects.html">Projets informatiques</a></button>
+                    <button><a href="./work.html">Expériences professionnelles</a></button>
                 </div>
             </div>
-            <h1>Compétences</h1>
         </header>
         <main>
             <nav class="filtres">
-                <ul>
-                    <li><a href="#" onclick="showSection('hardskills')">Hard skills</a></li>
-                    <li><a href="#" onclick="showSection('softskills')">Soft skills</a></li>
-                </ul>
+                <button><a href="#" onclick="showSection('hardskills')">Hard skills</a></button>
+                <button><a href="#" onclick="showSection('softskills')">Soft skills</a></button>
             </nav>
             <article id="hardskills">
                 <div>
@@ -101,4 +92,3 @@
         </footer>
     </body>
 </html>
-
