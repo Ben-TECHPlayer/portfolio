@@ -15,12 +15,12 @@ header h1{
     text-align: center;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     header h1{
         margin-left: 8.4rem;
         text-align: left;
     }
-}
+} */
 
 .header-container{
     display: flex;
@@ -29,8 +29,18 @@ header h1{
     justify-content: space-around;
 }
 
+@media (max-width: 1000px) {
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-around;
+    }
+}
+
 .menu{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     align-items: center;
@@ -92,6 +102,20 @@ header h1{
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
         grid-template-rows: repeat(3, auto);   /* 2 lignes, hauteur automatique */
+        gap: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 560px) {
+    #panel{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 3 colonnes égales */
+        grid-template-rows: repeat(6, auto);   /* 2 lignes, hauteur automatique */
         gap: 10px;
         font-weight: bold;
         font-size: 20px;
