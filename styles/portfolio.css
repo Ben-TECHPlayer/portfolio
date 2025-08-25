@@ -132,6 +132,7 @@ header h1{
     background-image: url(../images/hardskills.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: white;
 }
 
 .lesson{
