@@ -8,7 +8,7 @@
         <script src="./scripts/script.js" defer></script>
     </head>
 
-    <body>
+    <body onload="showSection('hardskills')">
         <header>
             <div class="header-container">
                 <h1>Ben.</h1>
@@ -24,8 +24,8 @@
         </header>
         <main>
             <nav class="filtres">
-                <button><a href="#" onclick="showSection('hardskills')">Hard skills</a></button>
-                <button><a href="#" onclick="showSection('softskills')">Soft skills</a></button>
+                <button id="btn-hardskills"><a href="#" onclick="showSection('hardskills')">Hard skills</a></button>
+                <button id="btn-softskills"><a href="#" onclick="showSection('softskills')">Soft skills</a></button>
             </nav>
             <article id="hardskills">
                 <div>
@@ -92,4 +92,3 @@
         </footer>
     </body>
 </html>
-
