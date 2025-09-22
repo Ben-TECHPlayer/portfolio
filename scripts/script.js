@@ -26,19 +26,19 @@ function showSection(sectionId) {
     if (sectionId === 'hardskills') {
         hard.style.display = 'grid';
         soft.style.display = 'none';
-        hardBtn.style.color = 'greenyellow';
+        hardBtn.style.color = 'blue';
         softBtn.style.color = '';
     } else if (sectionId === 'softskills') {
         hard.style.display = 'none';
         soft.style.display = 'grid';
         hardBtn.style.color = '';
-        softBtn.style.color = 'greenyellow';
+        softBtn.style.color = 'blue';
     } else if (sectionId === 'every') {
         all.style.display = 'grid';
         sti2d.style.display = 'none';
         but.style.display = 'none';
         home.style.display = 'none';
-        allBtn.style.color = 'greenyellow';
+        allBtn.style.color = 'blue';
         sti2dBtn.style.color = '';
         butBtn.style.color = '';
         homeBtn.style.color = '';
@@ -48,7 +48,7 @@ function showSection(sectionId) {
         but.style.display = 'none';
         home.style.display = 'none';
         allBtn.style.color = '';
-        sti2dBtn.style.color = 'greenyellow';
+        sti2dBtn.style.color = 'blue';
         butBtn.style.color = '';
         homeBtn.style.color = '';
     } else if (sectionId === 'but') {
@@ -58,7 +58,7 @@ function showSection(sectionId) {
         home.style.display = 'none';
         allBtn.style.color = '';
         sti2dBtn.style.color = '';
-        butBtn.style.color = 'greenyellow';
+        butBtn.style.color = 'blue';
         homeBtn.style.color = '';
     } else if (sectionId === 'home') {
         all.style.display = 'none';
@@ -68,13 +68,13 @@ function showSection(sectionId) {
         allBtn.style.color = '';
         sti2dBtn.style.color = '';
         butBtn.style.color = '';
-        homeBtn.style.color = 'greenyellow';
+        homeBtn.style.color = 'blue';
     } else if (sectionId === 'works') {
         work.style.display = 'grid';
         salon.style.display = 'none';
         intern.style.display = 'none';
         jobs.style.display = 'none';
-        workBtn.style.color = 'greenyellow';
+        workBtn.style.color = 'blue';
         salonBtn.style.color = '';
         internBtn.style.color = '';
         jobsBtn.style.color = '';
@@ -84,7 +84,7 @@ function showSection(sectionId) {
         intern.style.display = 'none';
         jobs.style.display = 'none';
         workBtn.style.color = '';
-        salonBtn.style.color = 'greenyellow';
+        salonBtn.style.color = 'blue';
         internBtn.style.color = '';
         jobsBtn.style.color = '';
     } else if (sectionId === 'internship') {
@@ -94,7 +94,7 @@ function showSection(sectionId) {
         jobs.style.display = 'none';
         workBtn.style.color = '';
         salonBtn.style.color = '';
-        internBtn.style.color = 'greenyellow';
+        internBtn.style.color = 'blue';
         jobsBtn.style.color = '';
     } else if (sectionId === 'full-time') {
         work.style.display = 'none';
@@ -104,6 +104,6 @@ function showSection(sectionId) {
         workBtn.style.color = '';
         salonBtn.style.color = '';
         internBtn.style.color = '';
-        jobsBtn.style.color = 'greenyellow';
+        jobsBtn.style.color = 'blue';
     }
 }
