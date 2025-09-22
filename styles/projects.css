@@ -21,12 +21,12 @@
 }
 
 .filtres button:hover {
-    color: greenyellow;
+    color: blue;
     transition: ease-in 0.3s;
 }
 
 .filtres button:active {
-    color: greenyellow;
+    color: blue;
 }
 
 #but, #every, #sti2d, #home {
