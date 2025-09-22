@@ -5,22 +5,13 @@ html {
 }
 
 body{
-    background-image: url(../images/gtaVI.png);
-    background-size: auto;
-    /* background-repeat: no-repeat; */
+    background: #78FC80;
 }
 
 header h1{
     color: #b2995a;
     text-align: center;
 }
-
-/* @media (max-width: 700px) {
-    header h1{
-        margin-left: 8.4rem;
-        text-align: left;
-    }
-} */
 
 .header-container{
     display: flex;
@@ -47,7 +38,7 @@ header h1{
 }
 
 .menu button.active {
-    color: cyan;
+    color: blue;
 }
 
 .menu button{
@@ -66,12 +57,12 @@ header h1{
 }
 
 .menu button a:hover {
-    color: cyan;
+    color: blue;
     transition: ease-in 0.3s;
 }
 
 .menu button a:active {
-    color: cyan;
+    color: blue;
 }
 
 #panel{
@@ -92,7 +83,12 @@ header h1{
     align-items: center;      /* Centre verticalement */
     height: 300px;            /* Taille des carrés (ajustez la hauteur selon vos besoins) */
     border: 1px solid #ddd;   /* Optionnel : ajouter une bordure pour voir les carrés */
-}   
+    text-shadow: 1px 1px 2px white;
+}
+
+#panel div img {
+    opacity: 0.2;
+}
 
 @media(max-width: 720px) {
     #panel{
@@ -132,7 +128,6 @@ header h1{
     background-image: url(../images/hardskills.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: white;
 }
 
 .lesson{
@@ -154,7 +149,7 @@ header h1{
 }
 
 .chill{
-    background-image: url(../images/cr7.jfif);
+    background-image: url(../images/informatique.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -180,7 +175,7 @@ img{
 
 #embauche .cv a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 19px;
     color: black;
     display: block;
     width: fit-content;
@@ -196,12 +191,12 @@ img{
     margin-left: 20px;
     text-decoration: none;
     text-align: center;
-    font-size: 1rem;
+    font-size: 19px;
     color: black;
 }
 
 #embauche .ux-design a:hover, #embauche .cv a:hover{
-    color: #b2995a;
+    color: magenta;
 }
 
 footer {
@@ -212,7 +207,7 @@ footer {
 }
 
 footer h1 {
-    color: cyan;
+    color: blue;
     text-align: center;
     margin-bottom: 20px; /* Ajoute de l'espace entre le texte et les images */
 }
