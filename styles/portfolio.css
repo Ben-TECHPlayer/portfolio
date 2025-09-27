@@ -20,7 +20,7 @@ header h1{
     justify-content: space-around;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     .header-container{
         display: flex;
         flex-direction: column;
