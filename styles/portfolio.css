@@ -89,7 +89,7 @@ header h1{
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 #panel div { 
@@ -98,7 +98,7 @@ header h1{
     align-items: center;      /* Centre verticalement */
     height: 300px;            /* Taille des carrés (ajustez la hauteur selon vos besoins) */
     border: 1px solid #ddd;   /* Optionnel : ajouter une bordure pour voir les carrés */
-    text-shadow: 1px 1px 2px white;
+    text-shadow: -1px 1px 2px white,   1px -1px 2px white;
 }
 
 #panel div img {
