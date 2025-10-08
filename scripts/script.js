@@ -26,19 +26,19 @@ function showSection(sectionId) {
     if (sectionId === 'hardskills') {
         hard.style.display = 'grid';
         soft.style.display = 'none';
-        hardBtn.style.color = 'blue';
+        hardBtn.style.color = 'yellow';
         softBtn.style.color = '';
     } else if (sectionId === 'softskills') {
         hard.style.display = 'none';
         soft.style.display = 'grid';
         hardBtn.style.color = '';
-        softBtn.style.color = 'blue';
+        softBtn.style.color = 'yellow';
     } else if (sectionId === 'every') {
         all.style.display = 'grid';
         sti2d.style.display = 'none';
         but.style.display = 'none';
         home.style.display = 'none';
-        allBtn.style.color = 'blue';
+        allBtn.style.color = 'yellow';
         sti2dBtn.style.color = '';
         butBtn.style.color = '';
         homeBtn.style.color = '';
@@ -48,7 +48,7 @@ function showSection(sectionId) {
         but.style.display = 'none';
         home.style.display = 'none';
         allBtn.style.color = '';
-        sti2dBtn.style.color = 'blue';
+        sti2dBtn.style.color = 'yellow';
         butBtn.style.color = '';
         homeBtn.style.color = '';
     } else if (sectionId === 'but') {
@@ -58,7 +58,7 @@ function showSection(sectionId) {
         home.style.display = 'none';
         allBtn.style.color = '';
         sti2dBtn.style.color = '';
-        butBtn.style.color = 'blue';
+        butBtn.style.color = 'yellow';
         homeBtn.style.color = '';
     } else if (sectionId === 'home') {
         all.style.display = 'none';
@@ -68,12 +68,12 @@ function showSection(sectionId) {
         allBtn.style.color = '';
         sti2dBtn.style.color = '';
         butBtn.style.color = '';
-        homeBtn.style.color = 'blue';
+        homeBtn.style.color = 'yellow';
     } else if (sectionId === 'works') {
         work.style.display = 'grid';
         intern.style.display = 'none';
         jobs.style.display = 'none';
-        workBtn.style.color = 'blue';
+        workBtn.style.color = 'yellow';
         internBtn.style.color = '';
         jobsBtn.style.color = '';
     } else if (sectionId === 'internship') {
@@ -81,7 +81,7 @@ function showSection(sectionId) {
         intern.style.display = 'grid';
         jobs.style.display = 'none';
         workBtn.style.color = '';
-        internBtn.style.color = 'blue';
+        internBtn.style.color = 'yellow';
         jobsBtn.style.color = '';
     } else if (sectionId === 'full-time') {
         work.style.display = 'none';
@@ -89,6 +89,6 @@ function showSection(sectionId) {
         jobs.style.display = 'grid';
         workBtn.style.color = '';
         internBtn.style.color = '';
-        jobsBtn.style.color = 'blue';
+        jobsBtn.style.color = 'yellow';
     }
 }
