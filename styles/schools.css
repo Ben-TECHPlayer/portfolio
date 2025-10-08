@@ -23,21 +23,9 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: yellow;
 }
 
-
-/* Style du titre */
-#formations div h2, #formations div p {
-    margin: 10px 0 0 10px;
-}
-
-#formations div h2{
-    padding-top: 10px;
-    font-size: 18px;
-}
-
-/* Logo en haut à droite */
 #formations div img {
     position: absolute;
     top: 10px;
@@ -45,11 +33,40 @@
     width: 70px;
     height: auto;
     padding: 10px;
+    flex-shrink: 0;
 }
+#formations div h2, #formations div p {
+    margin: 10px 0 0 10px;
+} 
+
+
+
+/* Style du titre */
+
+
+#formations div h2{
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#formations div p{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#formations div p strong{
+    color: black;
+    font-weight: 800;
+}
+
+/* Logo en haut à droite */
+
 
 footer{
     position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
