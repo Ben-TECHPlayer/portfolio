@@ -21,12 +21,12 @@
 }
 
 .filtres button:hover {
-    color: blue;
+    color: yellow;
     transition: ease-in 0.3s;
 }
 
 .filtres button:active {
-    color: blue;
+    color: yellow;
 }
 
 #but, #every, #sti2d, #home {
@@ -46,7 +46,7 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: yellow;
 }
 
 #but div img, #every div img, #sti2d div img, #home div img {
@@ -57,6 +57,17 @@
 #but h2 {
     text-align: left; /* Aligner le titre à gauche */
     margin-bottom: 10px;
+}
+
+article div p{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+article div p strong{
+    color: black;
+    font-weight: 800;
 }
 
 /* #panel img {
