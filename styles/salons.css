@@ -1,0 +1,39 @@
+#salons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    padding: 10px;
+}
+
+#salons div {
+    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
+    display: flex;
+    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
+    box-shadow: 0 0 20px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+#salons img {
+   /* position: absolute;
+    top: 20px;
+    right: 10px; */
+    width: 100%; 
+    height: auto;
+}
+
+@media (max-width: 1300px) {
+    #salons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    #salons {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
