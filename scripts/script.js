@@ -14,11 +14,11 @@ function showSection(sectionId) {
     const homeBtn = document.getElementById('btn-home');
 
     const work = document.getElementById('works');
-    const salon = document.getElementById('salons');
+    // const salon = document.getElementById('salons');
     const intern = document.getElementById('internship');
     const jobs = document.getElementById('full-time');
     const workBtn = document.getElementById('btn-works');
-    const salonBtn = document.getElementById('btn-salons');
+    // const salonBtn = document.getElementById('btn-salons');
     const internBtn = document.getElementById('btn-internship');
     const jobsBtn = document.getElementById('btn-full-time');
 
@@ -71,38 +71,23 @@ function showSection(sectionId) {
         homeBtn.style.color = 'blue';
     } else if (sectionId === 'works') {
         work.style.display = 'grid';
-        salon.style.display = 'none';
         intern.style.display = 'none';
         jobs.style.display = 'none';
         workBtn.style.color = 'blue';
-        salonBtn.style.color = '';
-        internBtn.style.color = '';
-        jobsBtn.style.color = '';
-    } else if (sectionId === 'salons') {
-        work.style.display = 'none';
-        salon.style.display = 'grid';
-        intern.style.display = 'none';
-        jobs.style.display = 'none';
-        workBtn.style.color = '';
-        salonBtn.style.color = 'blue';
         internBtn.style.color = '';
         jobsBtn.style.color = '';
     } else if (sectionId === 'internship') {
         work.style.display = 'none';
-        salon.style.display = 'none';
         intern.style.display = 'grid';
         jobs.style.display = 'none';
         workBtn.style.color = '';
-        salonBtn.style.color = '';
         internBtn.style.color = 'blue';
         jobsBtn.style.color = '';
     } else if (sectionId === 'full-time') {
         work.style.display = 'none';
-        salon.style.display = 'none';
         intern.style.display = 'none';
         jobs.style.display = 'grid';
         workBtn.style.color = '';
-        salonBtn.style.color = '';
         internBtn.style.color = '';
         jobsBtn.style.color = 'blue';
     }
