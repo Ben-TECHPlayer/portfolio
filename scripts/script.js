@@ -42,15 +42,6 @@ function showSection(sectionId) {
         // sti2dBtn.style.color = '';
         butBtn.style.color = '';
         homeBtn.style.color = '';
-    } else if (sectionId === 'sti2d') {
-        all.style.display = 'none';
-        // sti2d.style.display = 'grid';
-        but.style.display = 'none';
-        home.style.display = 'none';
-        allBtn.style.color = '';
-        // sti2dBtn.style.color = 'yellow';
-        butBtn.style.color = '';
-        homeBtn.style.color = '';
     } else if (sectionId === 'but') {
         all.style.display = 'none';
         // sti2d.style.display = 'none';
@@ -92,4 +83,5 @@ function showSection(sectionId) {
         jobsBtn.style.color = 'yellow';
     }
 }
+
 
