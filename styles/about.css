@@ -15,9 +15,11 @@
     color: black;
     font-size: 1.2rem;
     font-weight: 500;
+    margin-top: 2rem;
 }
 
 .panel ul li strong{
     color: black;
     font-weight: 850;
 }
+
