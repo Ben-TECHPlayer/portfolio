@@ -29,14 +29,14 @@
     color: yellow;
 }
 
-#but, #every, #sti2d, #home {
+#but, #every, #home {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
     gap: 20px; /* Espace entre les colonnes */
     padding: 10px;
 }
 
-#but div, #every div, #sti2d div, #home div {
+#but div, #every div, #home div {
     position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
     display: flex;
     flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
@@ -49,7 +49,7 @@
     background-color: yellow;
 }
 
-#but div img, #every div img, #sti2d div img, #home div img {
+#but div img, #every div img, #home div img {
     width: 100%;
     height: auto;
 }
@@ -83,7 +83,7 @@ article div p strong{
     margin-top: 10px;
 }
 
-#home, #sti2d, #but {
+#home, #but {
     display: none;
 }
 
@@ -91,13 +91,13 @@ article div p strong{
 
 
 @media screen and (max-width: 1200px) {
-    #every, #but, #home, #sti2d {
+    #every, #but, #home {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 850px) {
-    #every, #but, #home, #sti2d {
+    #every, #but, #home {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -105,3 +105,4 @@ article div p strong{
         flex-direction: column;
     }
 }
+
