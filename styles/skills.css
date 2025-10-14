@@ -5,6 +5,16 @@
     align-items: center;
 }
 
+@media(max-width: 350px){
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        gap: 0px;
+        /* align-items: center; */
+    }
+}
+
 .filtres button{
     padding: 15px;
     border-radius: 12px;
@@ -116,3 +126,4 @@ article div p{
         grid-template-columns: repeat(5, 1fr);
     }
 } */
+
