@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
-        /* gap: 10px; */
+        gap: 0px;
         /* align-items: center; */
     }
 }
@@ -115,5 +115,6 @@ article div p strong{
         flex-direction: column;
     }
 }
+
 
 
