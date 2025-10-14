@@ -5,11 +5,11 @@ function showSection(sectionId) {
     const softBtn = document.getElementById('btn-softskills');
 
     const all = document.getElementById('every');
-    const sti2d = document.getElementById('sti2d');
+    // const sti2d = document.getElementById('sti2d');
     const but = document.getElementById('but');
     const home = document.getElementById('home');
     const allBtn = document.getElementById('btn-every');
-    const sti2dBtn = document.getElementById('btn-sti2d');
+    // const sti2dBtn = document.getElementById('btn-sti2d');
     const butBtn = document.getElementById('btn-but');
     const homeBtn = document.getElementById('btn-home');
 
@@ -35,38 +35,38 @@ function showSection(sectionId) {
         softBtn.style.color = 'yellow';
     } else if (sectionId === 'every') {
         all.style.display = 'grid';
-        sti2d.style.display = 'none';
+        // sti2d.style.display = 'none';
         but.style.display = 'none';
         home.style.display = 'none';
         allBtn.style.color = 'yellow';
-        sti2dBtn.style.color = '';
+        // sti2dBtn.style.color = '';
         butBtn.style.color = '';
         homeBtn.style.color = '';
     } else if (sectionId === 'sti2d') {
         all.style.display = 'none';
-        sti2d.style.display = 'grid';
+        // sti2d.style.display = 'grid';
         but.style.display = 'none';
         home.style.display = 'none';
         allBtn.style.color = '';
-        sti2dBtn.style.color = 'yellow';
+        // sti2dBtn.style.color = 'yellow';
         butBtn.style.color = '';
         homeBtn.style.color = '';
     } else if (sectionId === 'but') {
         all.style.display = 'none';
-        sti2d.style.display = 'none';
+        // sti2d.style.display = 'none';
         but.style.display = 'grid';
         home.style.display = 'none';
         allBtn.style.color = '';
-        sti2dBtn.style.color = '';
+        // sti2dBtn.style.color = '';
         butBtn.style.color = 'yellow';
         homeBtn.style.color = '';
     } else if (sectionId === 'home') {
         all.style.display = 'none';
-        sti2d.style.display = 'none';
+        // sti2d.style.display = 'none';
         but.style.display = 'none';
         home.style.display = 'grid';
         allBtn.style.color = '';
-        sti2dBtn.style.color = '';
+        // sti2dBtn.style.color = '';
         butBtn.style.color = '';
         homeBtn.style.color = 'yellow';
     } else if (sectionId === 'works') {
@@ -92,3 +92,4 @@ function showSection(sectionId) {
         jobsBtn.style.color = 'yellow';
     }
 }
+
