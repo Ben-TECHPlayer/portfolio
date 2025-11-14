@@ -4,23 +4,21 @@ function showSection(sectionId) {
     const hardBtn = document.getElementById('btn-hardskills');
     const softBtn = document.getElementById('btn-softskills');
 
-    const all = document.getElementById('every');
-    // const sti2d = document.getElementById('sti2d');
-    const but = document.getElementById('but');
-    const home = document.getElementById('home');
-    const allBtn = document.getElementById('btn-every');
-    // const sti2dBtn = document.getElementById('btn-sti2d');
-    const butBtn = document.getElementById('btn-but');
-    const homeBtn = document.getElementById('btn-home');
+    const webdev = document.getElementById('web-dev');
+    const webdesign = document.getElementById('web-design');
+    const mobiledev = document.getElementById('mobile');
+    const webdevBtn = document.getElementById('btn-webdev');
+    const webdesignBtn = document.getElementById('btn-webdesign');
+    const mobileBtn = document.getElementById('btn-mobile');
 
-    const work = document.getElementById('works');
-    // const salon = document.getElementById('salons');
-    const intern = document.getElementById('internship');
-    const jobs = document.getElementById('full-time');
-    const workBtn = document.getElementById('btn-works');
-    // const salonBtn = document.getElementById('btn-salons');
-    const internBtn = document.getElementById('btn-internship');
-    const jobsBtn = document.getElementById('btn-full-time');
+    // const work = document.getElementById('works');
+    // // const salon = document.getElementById('salons');
+    // const intern = document.getElementById('internship');
+    // const jobs = document.getElementById('full-time');
+    // const workBtn = document.getElementById('btn-works');
+    // // const salonBtn = document.getElementById('btn-salons');
+    // const internBtn = document.getElementById('btn-internship');
+    // const jobsBtn = document.getElementById('btn-full-time');
 
 
     if (sectionId === 'hardskills') {
@@ -33,54 +31,27 @@ function showSection(sectionId) {
         soft.style.display = 'grid';
         hardBtn.style.color = '';
         softBtn.style.color = 'yellow';
-    } else if (sectionId === 'every') {
-        all.style.display = 'grid';
-        // sti2d.style.display = 'none';
-        but.style.display = 'none';
-        home.style.display = 'none';
-        allBtn.style.color = 'yellow';
-        // sti2dBtn.style.color = '';
-        butBtn.style.color = '';
-        homeBtn.style.color = '';
-    } else if (sectionId === 'but') {
-        all.style.display = 'none';
-        // sti2d.style.display = 'none';
-        but.style.display = 'grid';
-        home.style.display = 'none';
-        allBtn.style.color = '';
-        // sti2dBtn.style.color = '';
-        butBtn.style.color = 'yellow';
-        homeBtn.style.color = '';
-    } else if (sectionId === 'home') {
-        all.style.display = 'none';
-        // sti2d.style.display = 'none';
-        but.style.display = 'none';
-        home.style.display = 'grid';
-        allBtn.style.color = '';
-        // sti2dBtn.style.color = '';
-        butBtn.style.color = '';
-        homeBtn.style.color = 'yellow';
-    } else if (sectionId === 'works') {
-        work.style.display = 'grid';
-        intern.style.display = 'none';
-        jobs.style.display = 'none';
-        workBtn.style.color = 'yellow';
-        internBtn.style.color = '';
-        jobsBtn.style.color = '';
-    } else if (sectionId === 'internship') {
-        work.style.display = 'none';
-        intern.style.display = 'grid';
-        jobs.style.display = 'none';
-        workBtn.style.color = '';
-        internBtn.style.color = 'yellow';
-        jobsBtn.style.color = '';
-    } else if (sectionId === 'full-time') {
-        work.style.display = 'none';
-        intern.style.display = 'none';
-        jobs.style.display = 'grid';
-        workBtn.style.color = '';
-        internBtn.style.color = '';
-        jobsBtn.style.color = 'yellow';
-    }
+    } else if (sectionId === 'web-dev') {
+        webdev.style.display = 'grid';
+        webdesign.style.display = 'none';
+        mobiledev.style.display = 'none';
+        webdevBtn.style.color = 'yellow';
+        webdesignBtn.style.color = '';
+        mobileBtn.style.color = '';
+    } else if (sectionId === 'web-design') {
+        webdev.style.display = 'none';
+        webdesign.style.display = 'grid';
+        mobiledev.style.display = 'none';
+        webdevBtn.style.color = '';
+        webdesignBtn.style.color = 'yellow';
+        mobileBtn.style.color = '';
+    } else if (sectionId === 'mobile') {
+        webdev.style.display = 'none';
+        webdesign.style.display = 'none';
+        mobiledev.style.display = 'grid';
+        webdevBtn.style.color = '';
+        webdesignBtn.style.color = '';
+        mobileBtn.style.color = 'yellow';
+    } 
 }
 

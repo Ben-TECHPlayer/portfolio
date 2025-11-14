@@ -176,11 +176,270 @@ header h1 a{
     }
 }
 
+#panel-formations .formation-item{
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    box-shadow: 0 0 20px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: yellow;
+}
+
+#panel-formations .formation-item img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: auto;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+#panel-formations .formation-item h2, #panel-formations .formation-item p {
+    margin: 10px 0 0 10px;
+}
+
+.filtres{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+@media(max-width: 350px){
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        gap: 0px;
+        /* align-items: center; */
+    }
+}
+
+.filtres button{
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: none;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.filtres button a {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;  /* Retire le soulignement des liens */
+    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
+}
+
+.filtres button:hover {
+    color: yellow;
+    transition: ease-in 0.3s;
+}
+
+.filtres button:active {
+    color: yellow;
+}
+
+article div p{
+    font-weight: 600;
+}
+
+#hardskills div, #softskills div {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    box-shadow: 0 0 20px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: yellow;
+    /*height: auto;
+     min-height: 150px; */
+}
+
+#hardskills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+#softskills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 1260px) {
+    #hardskills, #softskills {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1020px){
+    #hardskills, #softskills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 700px){
+    #hardskills, #softskills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    #hardskills, #softskills {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 300px){
+    .filtres ul{
+        flex-direction: column;
+    }
+}
+
+#softskills {
+    display: none;
+}
+
+#web-dev, #web-design, #mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    padding: 10px;
+}
+
+#web-dev .projet-item, #web-design .projet-item, #mobile .projet-item {
+    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
+    display: flex;
+    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
+    box-shadow: 0 0 20px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: yellow;
+}
+
+#web-dev .projet-item img, #web-design .projet-item img, #mobile .projet-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* #but h2 {
+    text-align: left; 
+    margin-bottom: 10px;
+} */
+
+.projet-item p{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.projet-item p strong{
+    color: black;
+    font-weight: 800;
+}
+
+#panel-emplois {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    padding: 10px;
+}
+
+#panel-emplois .emplois-item {
+    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
+    display: flex;
+    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
+    justify-content: flex-start; /* Aligner le contenu en haut */
+    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
+    box-shadow: 0 0 20px black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: yellow;
+}
+
+#panel-emplois img{
+   /* position: absolute;
+    top: 20px;
+    right: 10px; */
+    width: 100%; 
+    height: auto;
+}
+
+#panel-emplois .emplois-item p{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#panel-emplois .emplois-item p strong{
+    color: black;
+    font-weight: 800;
+}
+
+@media (max-width: 1300px) {
+    #panel-emplois {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    #panel-emplois {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 350px){
+    .filtres ul{
+        flex-direction: column;
+    }
+}
+
+/* #panel-formations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 700px){
+    #panel-formations{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 #panel{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    grid-template-rows: repeat(2, auto);   /* 2 lignes, hauteur automatique */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto);  
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
@@ -188,10 +447,10 @@ header h1 a{
 
 #panel div { 
     display: flex;
-    justify-content: center;  /* Centre horizontalement */
-    align-items: center;      /* Centre verticalement */
-    height: 300px;            /* Taille des carrés (ajustez la hauteur selon vos besoins) */
-    border: 1px solid #ddd;   /* Optionnel : ajouter une bordure pour voir les carrés */
+    justify-content: center;  
+    align-items: center;     
+    height: 300px;            
+    border: 1px solid #ddd;  
     text-shadow: -1px 1px 2px white,   1px -1px 2px white;
     font-weight: bold;
     font-size: 2rem;
@@ -233,9 +492,8 @@ header h1 a{
         text-align: center;
         padding: 5px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
-        grid-template-rows: repeat(3, auto);   /* 2 lignes, hauteur automatique */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, auto); 
         font-weight: bold;
         font-size: 20px;
     }
@@ -247,13 +505,13 @@ header h1 a{
         text-align: center;
         padding: 5px;
         display: grid;
-        grid-template-columns: repeat(1, 1fr); /* 3 colonnes égales */
-        grid-template-rows: repeat(6, auto);   /* 2 lignes, hauteur automatique */
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-rows: repeat(6, auto);  
         gap: 10px;
         font-weight: bold;
         font-size: 20px;
     }
-}
+} */
 
 /* .school{
     background-image: url(../images/school.jfif);
@@ -264,6 +522,31 @@ header h1 a{
 img{
     width: 10%;
     height: 5%;
+}
+
+.cv {
+  display: inline-block;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cv img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cv p {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color:blue;
 }
 
 #embauche {

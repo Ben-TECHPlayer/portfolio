@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="google-site-verification" content="Y4SEIO62Aqxy9BerhgrqSNELrCXSSOSSCbjJxNBI4uU" />
         <title>Portfolio</title>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="./styles/portfolio.css">
         <script src="./scripts/script.js" defer></script>
     </head>
@@ -162,13 +162,13 @@
             <h1>Projets</h1>
 
             <nav class="filtres">
-                <button id="btn-every"><a href="#" onclick="showSection('every')">Développement web</a></button>
-                <button id="btn-home"><a href="#" onclick="showSection('home')">Design web</a></button>
-                <button id="btn-sti2d"><a href="#" onclick="showSection('sti2d')">Développement mobile</a></button>
+                <button id="btn-webdev"><a href="#" onclick="showSection('web-dev')">Développement web</a></button>
+                <button id="btn-webdesign"><a href="#" onclick="showSection('web-design')">Design web</a></button>
+                <button id="btn-mobile"><a href="#" onclick="showSection('mobile')">Développement mobile</a></button>
             </nav>
 
-            <article id="every">
-                <div>
+            <article id="web-dev">
+                <div class="projet-item">
                     <h2>Horloge multifonction</h2>
                     <img src="./images/horloge-theme.png" alt="horloge">
                     <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
@@ -177,7 +177,7 @@
                     <p>Lien source: <a href="https://ben-techplayer.github.io/chronometre/">Lien du site web</a></p>
                     <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/chronometre/">Voir aussi sur GitHub</a></p>
                 </div>
-                <div>
+                <div class="projet-item">
                     <h2>Site vitrine spécial Mondial 2026</h2>
                     <img src="./images/worldcup26.png" alt="coupedumonde">
                     <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
@@ -186,7 +186,7 @@
                     <p>Lien source: <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a></p>
                     <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026">Voir aussi sur GitHub</a></p>
                 </div>
-                <div>
+                <div class="projet-item">
                     <h2>Portfolio personnel</h2>
                     <img src="./images/portfolio-theme.png" alt="portfolio">
                     <p><strong>Dates : </strong>Du 24 septembre 2024 au 19 octobre 2025*</p>
@@ -196,7 +196,7 @@
                     <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/portfolio">Voir aussi sur GitHub</a></p>
                     <p>* <i>incluant des améliorations tout au long de mon portfolio</i></p>
                 </div>
-                <div>
+                <div class="projet-item">
                     <h2>Site web : Formation Tactique Militaire</h2>
                     <img src="./images/site-web-militaire.jpg" alt="website">
                     <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
@@ -207,8 +207,8 @@
                 </div>
             </article>
 
-            <article id="home">
-                <div>
+            <article id="web-design">
+                <div class="projet-item">
                     <h2>CIte Universitaire de Paris</h2>
                     <img src="./images/site-web-militaire.jpg" alt="website">
                     <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
@@ -217,7 +217,7 @@
                     <p>Lien source: <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien du site web</a></p>
                     <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
                 </div>
-                <div>
+                <div class="projet-item">
                     <h2>Magic Music</h2>
                     <img src="./images/site-web-militaire.jpg" alt="website">
                     <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
@@ -228,15 +228,15 @@
                 </div>
             </article>
 
-            <article id="sti2d">
-                <div>
+            <article id="mobile">
+                <div class="projet-item">
                     <h2>Application Java sur la cité internationale universitaire de Paris</h2>
                     <img src="./images/ciup.jpg" alt="JO 2024">
                     <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
                     <p><strong>Fonctionnalités :</strong></br>Recueil de besoins</br>Maquettes interactives</br>Programmation orienté objet</br>Création et suppression des maisons</br>Gestion des menus des restos U</br>Gestion des maisons</br>Inscription etudiant</p>
                     <p><strong>Compétences : </strong>Java Swing, Java, Figma, Office 365, GitLab, maquettage, leadership, gestion de projet, méthode agile, travail d'équipe</p>
                 </div>
-                <div>
+                <div class="projet-item">
                     <h2>Application Java sur les Jeux Olympiques</h2>
                     <img src="./images/logoparis.png" alt="JO 2024">
                     <p><strong>Dates : </strong>Du 5 février au 17 juin 2024</p>
@@ -248,7 +248,8 @@
             <h1>Emplois</h1>
             <article id="panel-emplois">
                 <div class="emplois-item">
-                    <h2 class="fs-4">Vendeur polyvalent</h2><img class="img-fluid">
+                    <h2>Vendeur polyvalent</h2>
+                    <img src="./images/pastry.jpeg" class="img-fluid">
                     <p><strong>Année :</strong> 2025</p>
                     <p><strong>Entreprise :</strong> PRIMARK</p>
                     <p><strong>Lieu :</strong> Serris, Île-de-France, France</p>
@@ -275,10 +276,15 @@
                     </ul>
                 </div>
             </article>
+
             <div id="embauche">
-                <div class="cv">
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali" class="cv-button"><img src="./images/pdf.png" alt="Gmail">Télécharger mon CV</a>
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" class="cv-button"><img src="./images/pdf.png" alt="Gmail">Regarder mon CV</a>
+                <div class="cv" href="CV_Stage_ABOUDOU_Ben-Ali.pdf">
+                    <img src="./images/pdf.png" alt="download-cv">
+                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali" class="cv-button">Télécharger mon CV</a>
+                </div>
+                <div class="cv" href="CV_Stage_ABOUDOU_Ben-Ali.pdf">
+                    <img src="./images/pdf.png" alt="watch-cv">
+                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" class="cv-button">Regarder mon CV</a>
                     <!-- <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali"><img src="./images/code-qr-download-cv.png" alt="me">Télécharger mon CV</a> -->
                     <!-- <h2 style="color: blue; text-align: center;">CV</h2>
                     <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali">Mon CV</a> -->
