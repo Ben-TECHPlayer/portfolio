@@ -2,27 +2,31 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="google-site-verification" content="Y4SEIO62Aqxy9BerhgrqSNELrCXSSOSSCbjJxNBI4uU" />
-        <title>Page d'accueil</title>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="./styles/portfolio.css">
         <script src="./scripts/script.js" defer></script>
     </head>
-    <body>
+    <body onload="showSection('hardskills')">
         <header>
             <div class="header-container">
-                <h1>Ben.</h1>
-                <div class="menu">
-                    <button class="active"><a href="./index.html">Accueil</a></button>
-                    <button><a href="./about.html">À propos de moi</a></button>
-                    <button><a href="./schools.html">Formations</a></button>
-                    <button><a href="./skills.html">Compétences</a></button>
-                    <button><a href="./projects.html">Projets informatiques</a></button>
-                    <button><a href="./work.html">Expériences professionnelles</a></button>
-                </div>
+                <h1><a href="./index.html">Ben.</a></h1>
+                    <!-- <button class="active"><a href="./index.html">Accueil</a></button>
+                    <button><a href="./about.html">À propos de moi</a></button> -->
+                <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+                <nav class="menu">
+                    <a href="./schools.html">Formations</a>
+                    <a href="./skills.html">Compétences</a>
+                    <a href="./projects.html">Projets</a>
+                    <a href="./work.html">Emplois</a>
+                    <a href="./contact.html" class="btn-contact">Contact</a>
+                </nav>
             </div>
         </header>
         <main>
-            <div id="panel">
+            <!-- <div id="panel">
                 <div class="panel-item">
                     <img src="images/school.jfif" alt="school" class="bg-img">
                     <span class="label">Formations</span>
@@ -47,22 +51,251 @@
                     <img src="images/informatique.jpg" alt="passion" class="bg-img">
                     <span class="label">Hobbies</span>
                 </div>
+            </div> -->
+            <div id="profile-container">
+                <div class="about-me">
+                    <h1>Ben-Ali ABOUDOU</h1>
+                    <h2>Etudiant en deuxième année de BUT Informatique</h2>
+                    <!-- <p>A la recherche d'un stage informatique du 20 avril au 10 juillet 2026 dans le but de valider ma deuxième année de BUT Informatique</p> -->
+                    <p>Passionné par l'informatique, je suis motivé, disponible et engagé à la recherche d'un stage informatique du 20 avril au 10 juillet 2026 dans le but d'approfondir mes compétences informatiques</p>
+                    <p><strong>Spécialités : </strong>développement web, design web, développement mobile</p>
+                </div>
             </div>
+            
+            <h1>Formations</h1>
+            <article id="panel-formations">
+                <div class="formation-item">
+                    <div class="formation-title">
+                        <h2>Seconde générale et technologique</h2><img src="./images/ciup.jpg" class="img-fluid">
+                    </div>
+                    <p><strong>Période :</strong> 2020-2021</p>
+                    <p><span style="text-decoration: underline;">Mention bien</span></p>
+                    <p><strong>Certification :</strong> ASSR 2</p>
+                </div>
+                <div class="formation-item">
+                    <div class="formation-title">
+                        <h2>BAC STI2D</h2><img src="./images/ciup.jpg" class="img-fluid d-flex">
+                    </div>
+                    <p><strong>Période :</strong> 2021-2023</p>
+                    <p><span style="text-decoration: underline;">Mention assez bien</span></p>
+                    <p><strong>Certification :</strong> PIX</p>
+                </div>
+                <div class="formation-item">
+                    <div class="formation-title">
+                        <h2>BUT Informatique</h2><img src="./images/ciup.jpg" class="img-fluid">
+                    </div>
+                    <p><strong>Période :</strong> 2023-2027</p>
+                </div>
+            </article>
+
+            <h1>Compétences</h1>
+            <nav class="filtres">
+                <button id="btn-hardskills"><a href="#" onclick="showSection('hardskills')">Hard skills</a></button>
+                <button id="btn-softskills"><a href="#" onclick="showSection('softskills')">Soft skills</a></button>
+            </nav>
+            <article id="hardskills">
+                <div>
+                    <h2>Développement web</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>React</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Design UX/UI, web</h2>
+                    <ul>
+                        <li>Canva</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="fs-4">Développement mobile</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                        <li>Android Studio</li>
+                        <li>React Native</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Gestion de projet</h2>
+                    <ul>
+                        <li>Méthodes agiles(SCRUM)</li>
+                        <li>GitLab</li>
+                        <li>GitHub</li>
+                    </ul> 
+                </div>
+                
+                <!-- <div>
+                    <h2>Langues</h2>
+                    <p>Français</br>Anglais</br>Espagnol</p>
+                </div> -->
+            </article>
+            <article id="softskills">
+                <div>
+                    <h2>Comportement</h2>
+                    <ul>
+                        <li>Assidu</li>
+                        <li>Ponctuel</li>
+                        <li>Discipliné</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Gestion du temps</h2>
+                    <ul>
+                        <li>Organisé</li>
+                        <li>Ouvert d'esprit</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Travail d'équipe</h2>
+                    <ul>
+                        <li>Communicant</li>
+                        <li>Dynamique</li>
+                    </ul>
+                </div>
+            </article>
+
+            <h1>Projets</h1>
+
+            <nav class="filtres">
+                <button id="btn-every"><a href="#" onclick="showSection('every')">Développement web</a></button>
+                <button id="btn-home"><a href="#" onclick="showSection('home')">Design web</a></button>
+                <button id="btn-sti2d"><a href="#" onclick="showSection('sti2d')">Développement mobile</a></button>
+            </nav>
+
+            <article id="every">
+                <div>
+                    <h2>Horloge multifonction</h2>
+                    <img src="./images/horloge-theme.png" alt="horloge">
+                    <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
+                    <p><strong>Fonctionnalités :</strong></br>Alarme et minuteur personnalisables</br>Chronomètre pour suivre le temps de nos tâches</br>Horloge mondiale pour voir l’heure dans différents pays</p>
+                    <p><strong>Compétences : </strong>HTML, CSS, JavaScript, React, GitHub</p>
+                    <p>Lien source: <a href="https://ben-techplayer.github.io/chronometre/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/chronometre/">Voir aussi sur GitHub</a></p>
+                </div>
+                <div>
+                    <h2>Site vitrine spécial Mondial 2026</h2>
+                    <img src="./images/worldcup26.png" alt="coupedumonde">
+                    <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
+                    <p><strong>Fonctionnalités :</strong></br>Site vitrine monopage</br>Formulaire interactif pour les fans</br>Design sur le thème du Mondial 2026</br>Disponible en français, anglais et espagnol</p>
+                    <p><strong>Compétences : </strong>HTML, CSS, JavaScript, React, GitHub</p>
+                    <p>Lien source: <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026">Voir aussi sur GitHub</a></p>
+                </div>
+                <div>
+                    <h2>Portfolio personnel</h2>
+                    <img src="./images/portfolio-theme.png" alt="portfolio">
+                    <p><strong>Dates : </strong>Du 24 septembre 2024 au 19 octobre 2025*</p>
+                    <p><strong>Compétences : </strong>HTML, CSS, JavaScript, Visual Studio Code, Figma</p>
+                    <p><strong>Fonctionnalités :</strong></br>Mise en avant de mes compétences</br>Présentation de mes projets académiques et personnels</br>Ambitions pour mes futurs projets</p>
+                    <p>Lien source: <a href="https://ben-techplayer.github.io/portfolio/">Lien de mon portfolio</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/portfolio">Voir aussi sur GitHub</a></p>
+                    <p>* <i>incluant des améliorations tout au long de mon portfolio</i></p>
+                </div>
+                <div>
+                    <h2>Site web : Formation Tactique Militaire</h2>
+                    <img src="./images/site-web-militaire.jpg" alt="website">
+                    <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
+                    <p><strong>Compétences : </strong>HTML, CSS, Responsive design, Notepad++, Flexbox, Grid, IFrame</p>
+                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
+                    <p>Lien source: <a href="https://ben-techplayer.github.io/formation-militaire-tactique/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/formation-militaire-tactique/">Voir aussi sur GitHub</a></p>
+                </div>
+            </article>
+
+            <article id="home">
+                <div>
+                    <h2>CIte Universitaire de Paris</h2>
+                    <img src="./images/site-web-militaire.jpg" alt="website">
+                    <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
+                    <p><strong>Compétence : </strong>Figma</p>
+                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
+                    <p>Lien source: <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
+                </div>
+                <div>
+                    <h2>Magic Music</h2>
+                    <img src="./images/site-web-militaire.jpg" alt="website">
+                    <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
+                    <p><strong>Compétence : </strong>Figma</p>
+                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
+                    <p>Lien source: <a href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
+                </div>
+            </article>
+
+            <article id="sti2d">
+                <div>
+                    <h2>Application Java sur la cité internationale universitaire de Paris</h2>
+                    <img src="./images/ciup.jpg" alt="JO 2024">
+                    <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
+                    <p><strong>Fonctionnalités :</strong></br>Recueil de besoins</br>Maquettes interactives</br>Programmation orienté objet</br>Création et suppression des maisons</br>Gestion des menus des restos U</br>Gestion des maisons</br>Inscription etudiant</p>
+                    <p><strong>Compétences : </strong>Java Swing, Java, Figma, Office 365, GitLab, maquettage, leadership, gestion de projet, méthode agile, travail d'équipe</p>
+                </div>
+                <div>
+                    <h2>Application Java sur les Jeux Olympiques</h2>
+                    <img src="./images/logoparis.png" alt="JO 2024">
+                    <p><strong>Dates : </strong>Du 5 février au 17 juin 2024</p>
+                    <p><strong>Fonctionnalités :</strong></br>Recueil de besoins</br>Maquettes interactives</br>Programmation orienté objet</br>Création des équipes et des participants</br>Gestion des sessions</br>Résultats des épreuves en direct et en temps réel</p>
+                    <p><strong>Compétences : </strong>UML, Java Swing, Java, Penpot, maquettage, PERT, GANTT, gestion de projet, PBS, WBS, travail d'équipe</p>
+                </div>
+            </article>
+
+            <h1>Emplois</h1>
+            <article id="panel-emplois">
+                <div class="emplois-item">
+                    <h2 class="fs-4">Vendeur polyvalent</h2><img class="img-fluid">
+                    <p><strong>Année :</strong> 2025</p>
+                    <p><strong>Entreprise :</strong> PRIMARK</p>
+                    <p><strong>Lieu :</strong> Serris, Île-de-France, France</p>
+                    <p><strong>Missions :</strong></p>
+                    <ul style="margin-top: -1rem;">
+                        <li>Accueil et fidélisation des clients</li>
+                        <li>Pliage des vêtements</li>
+                        <li>Maintien du rayon au propre</li>
+                        <li>Gestion de la caisse</li>
+                        <li>Gestion des cabines d'essayage</li>
+                    </ul>
+                </div>
+                <div class="emplois-item">
+                    <h2>Stage de découverte : Boulanger-pâtissier</h2>
+                    <img src="./images/pastry.jpeg" class="img-fluid">
+                    <p><strong>Année :</strong> 2019</p>
+                    <p><strong>Entreprise :</strong> La Royale</p>
+                    <p><strong>Lieu :</strong> Montreuil, Île-de-France, France</p>
+                    <p><strong>Missions :</strong></p>
+                    <ul style="margin-top: -1rem;">
+                        <li>Préparation de stocks</li>
+                        <li>Livraison de stocks</li>
+                        <li>Maintien du rayon au propre</li>
+                    </ul>
+                </div>
+            </article>
             <div id="embauche">
                 <div class="cv">
-                    <h2 style="color: blue; text-align: center;">CV</h2>
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali">Mon CV</a>
+                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali" class="cv-button"><img src="./images/pdf.png" alt="Gmail">Télécharger mon CV</a>
+                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" class="cv-button"><img src="./images/pdf.png" alt="Gmail">Regarder mon CV</a>
+                    <!-- <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali"><img src="./images/code-qr-download-cv.png" alt="me">Télécharger mon CV</a> -->
+                    <!-- <h2 style="color: blue; text-align: center;">CV</h2>
+                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali">Mon CV</a> -->
                 </div>
-                <div class="ux-design">
+                <!-- <div class="ux-design">
                     <h2 style="color: blue; text-align: center;">Maquettes Figma</h2>
                     <a href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1">Magic Music</a>
                     <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1">Cité Universitaire de Paris</a>
-                </div>
+                </div> -->
             </div>
             
         </main>
         <footer>
-            <h1>Contact</h1>
+            <div class="droits-auteur">
+                <p>© 2025 Ben-Ali ABOUDOU. Tous droits réservés.</p>
+                <p>Étudiant en BUT Informatique à l'IUT d'Orsay</p>
+            </div>
             <div class="contact-icons">
                 <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>
                 <a href="http://www.linkedin.com/in/ben-ali-aboudou-9a412b269/"><img src="./images/linkedin.png" alt="LinkedIn"></a>
@@ -70,8 +303,17 @@
                 <a href="https://git.iut-orsay.fr/baboudo"> <img src="./images/gitlab.png" alt="GitLab"></a> 
                 <a href="https://youtube.fr/@Ben_CR7"> <img src="./images/youtube.png" alt="Youtube"></a> 
             </div>
+            
         </footer>
-    </body> 
+    </body>
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 </html>
 
 

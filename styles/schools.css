@@ -6,7 +6,6 @@
 }
 
 @media (max-width: 700px){
-
     #formations{
         display: flex;
         flex-direction: column;

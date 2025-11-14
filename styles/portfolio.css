@@ -5,15 +5,91 @@ html {
 }
 
 body{
-    background: #C0C0C0;
+    background-color: snow;
 }
 
-header h1{
+/* header h1{
+    color: #b2995a;
+    text-align: center;
+} */
+
+header h1 a{
+    text-decoration: none;
     color: #b2995a;
     text-align: center;
 }
 
-.header-container{
+/* Style de base */
+/* header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+} */
+
+/* h1 a {
+  text-decoration: none;
+  color: #b2995a;
+  font-size: 1.5rem;
+  font-weight: 600;
+} */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.btn-contact {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  float: right;
+}
+
+/* Bouton hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/*.header-container{
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -56,28 +132,48 @@ header h1{
     color: blue;
 }
 
-.menu button{
+ .menu button{
     padding: 15px;
     border-radius: 12px;
     border: none;
     background: none;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-}
+} 
 
-.menu button a {
+.menu a {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: none;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 500;
     font-size: 18px;
-    text-decoration: none;  /* Retire le soulignement des liens */
-    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
+    text-decoration: none;
+    color: inherit; 
 }
 
-.menu button a:hover {
+.menu a:hover {
     color: blue;
     transition: ease-in 0.3s;
+}*/
+
+#profile-container{
+    text-align: center;
+    width: 100%;
 }
 
-.menu button a:active {
-    color: blue;
+#panel-formations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 700px){
+    #panel-formations{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #panel{
@@ -184,6 +280,18 @@ img{
     min-width: 300px; /* pour éviter que ça devienne trop petit */
 }
 
+button.cv-button{
+    background: none;
+    border: 1px solid red;
+}
+
+button.cv-button a{
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;  /* Retire le soulignement des liens */
+    color: red;
+}
+
 #embauche .cv a{
     text-decoration: none;
     font-size: 19px;
@@ -212,18 +320,24 @@ img{
 
 footer {
     display: flex;
-    flex-direction: column; /* Aligner le texte et les images verticalement */
-    align-items: center; /* Centrer le contenu */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between;
     padding: 10px;
 }
 
-footer h1 {
-    color: blue;
+footer.droits-auteur{
     text-align: center;
-    margin-bottom: 20px; /* Ajoute de l'espace entre le texte et les images */
 }
 
+/* footer h1 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+} */
+
 .contact-icons {
+    float: right;
     display: flex;
     justify-content: center; /* Centrer les icônes horizontalement */
     gap: 20px; /* Espacement entre les icônes */
@@ -238,6 +352,6 @@ footer h1 {
 }
 
 .contact-icons img {
-    width: 50px; /* Taille des images */
+    width: 30px; /* Taille des images */
     height: auto;
 }
