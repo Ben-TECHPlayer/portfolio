@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="google-site-verification" content="Y4SEIO62Aqxy9BerhgrqSNELrCXSSOSSCbjJxNBI4uU" />
-        <title>Page d'accueil</title>
+        <title>Formulaire de contact</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="./styles/portfolio.css">
+        <link rel="stylesheet" href="./styles/contact.css">
         <script src="./scripts/script.js" defer></script>
         <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
         <!-- <script src="./bootstrap.min.js"></script> -->
@@ -20,30 +21,30 @@
                     <button><a href="./about.html">À propos de moi</a></button> -->
                 <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
                 <nav class="menu">
-                    <a href="./schools.html">Formations</a>
-                    <a href="./skills.html">Compétences</a>
-                    <a href="./projects.html">Projets</a>
-                    <a href="./work.html">Emplois</a>
+                    <a href="./index.html#destination-formations">Formations</a>
+                    <a href="./index.html#destination-competences">Compétences</a>
+                    <a href="./index.html#destination-projets">Projets</a>
+                    <a href="./index.html#destination-emplois">Emplois</a>
                     <a href="./contact.html" class="btn-contact">Contact</a>
                 </nav>
             </div>
         </header>
-        <main class="mt-5">
+        <main>
             <section>
-            <h2 class="text-center mb-4">Contactez-nous</h2>
+            <h2>Contactez-nous</h2>
                 <form method="post">
-                    <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Votre nom"></div>
-                    <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Votre prénom"></div>
-                    <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Votre adresse-mail"></div>
-                    <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Votre message"></textarea></div>
-                    <div><button class="btn btn-primary w-100 d-block" type="submit">Envoyer</button></div>
+                    <input type="text" id="last-name" name="nom" placeholder="Votre nom" />
+                    <input type="text" id="first-name" name="prenom" placeholder="Votre prénom" />
+                    <input type="email" id="mail" name="adresse-mail" placeholder="Votre adresse-mail" />
+                    <textarea id="message" name="avis" rows="6" placeholder="Votre message"></textarea>
+                    <input type="submit" id="envoyer" name="validation" value="Envoyer"/>
                 </form>
             </section>
         </main>
         <footer>
             <div class="droits-auteur">
                 <p>© 2025 Ben-Ali ABOUDOU. Tous droits réservés.</p>
-                <p>Étudiant en BUT Informatique à l'IUT d'Orsay</p>
+                <p style="margin-top: -0.5rem;">Étudiant en BUT Informatique à l'IUT d'Orsay</p>
             </div>
             <div class="contact-icons">
                 <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>

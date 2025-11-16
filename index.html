@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./styles/portfolio.css">
         <script src="./scripts/script.js" defer></script>
     </head>
-    <body onload="showSection('hardskills')">
+    <body onload="showSection('hardskills'), showSection('web-dev')">
         <header>
             <div class="header-container">
                 <h1><a href="./index.html">Ben.</a></h1>
@@ -17,10 +17,10 @@
                     <button><a href="./about.html">À propos de moi</a></button> -->
                 <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
                 <nav class="menu">
-                    <a href="./schools.html">Formations</a>
-                    <a href="./skills.html">Compétences</a>
-                    <a href="./projects.html">Projets</a>
-                    <a href="./work.html">Emplois</a>
+                    <a href="#destination-formations">Formations</a>
+                    <a href="#destination-competences">Compétences</a>
+                    <a href="#destination-projets">Projets</a>
+                    <a href="#destination-emplois">Emplois</a>
                     <a href="./contact.html" class="btn-contact">Contact</a>
                 </nav>
             </div>
@@ -54,19 +54,20 @@
             </div> -->
             <div id="profile-container">
                 <div class="about-me">
-                    <h1>Ben-Ali ABOUDOU</h1>
-                    <h2>Etudiant en deuxième année de BUT Informatique</h2>
+                    <h1 style="font-weight: 500; font-size: 3rem;">Ben-Ali ABOUDOU</h1>
+                    <h2 style="color: #007bff; font-weight: 500; font-size: 1.5rem;">Etudiant en deuxième année de BUT Informatique</h2>
                     <!-- <p>A la recherche d'un stage informatique du 20 avril au 10 juillet 2026 dans le but de valider ma deuxième année de BUT Informatique</p> -->
-                    <p>Passionné par l'informatique, je suis motivé, disponible et engagé à la recherche d'un stage informatique du 20 avril au 10 juillet 2026 dans le but d'approfondir mes compétences informatiques</p>
-                    <p><strong>Spécialités : </strong>développement web, design web, développement mobile</p>
+                    <p style="font-size: 20px;">Passionné par l'informatique, je suis motivé, disponible et engagé à la recherche d'un stage informatique du 20 avril au 10 juillet 2026 dans le but d'approfondir mes compétences informatiques</p>
+                    <p style="font-size: 20px;"><strong>Spécialités : </strong>développement web, design web, développement mobile</p>
                 </div>
             </div>
             
-            <h1>Formations</h1>
+            <h1 id="destination-formations">Formations</h1>
             <article id="panel-formations">
                 <div class="formation-item">
                     <div class="formation-title">
-                        <h2>Seconde générale et technologique</h2><img src="./images/ciup.jpg" class="img-fluid">
+                        <h2>Seconde générale et technologique</h2>
+                        <img src="./images/lycee-aristide-briand.png" class="img-fluid">
                     </div>
                     <p><strong>Période :</strong> 2020-2021</p>
                     <p><span style="text-decoration: underline;">Mention bien</span></p>
@@ -74,7 +75,8 @@
                 </div>
                 <div class="formation-item">
                     <div class="formation-title">
-                        <h2>BAC STI2D</h2><img src="./images/ciup.jpg" class="img-fluid d-flex">
+                        <h2>BAC STI2D</h2>
+                        <img src="./images/lycee-modeste-leroy.png" class="img-fluid">
                     </div>
                     <p><strong>Période :</strong> 2021-2023</p>
                     <p><span style="text-decoration: underline;">Mention assez bien</span></p>
@@ -82,16 +84,17 @@
                 </div>
                 <div class="formation-item">
                     <div class="formation-title">
-                        <h2>BUT Informatique</h2><img src="./images/ciup.jpg" class="img-fluid">
+                        <h2>BUT Informatique</h2>
+                        <img src="./images/iut-orsay.png" class="img-fluid">
                     </div>
                     <p><strong>Période :</strong> 2023-2027</p>
                 </div>
             </article>
 
-            <h1>Compétences</h1>
+            <h1 id="destination-competences">Compétences</h1>
             <nav class="filtres">
-                <button id="btn-hardskills"><a href="#" onclick="showSection('hardskills')">Hard skills</a></button>
-                <button id="btn-softskills"><a href="#" onclick="showSection('softskills')">Soft skills</a></button>
+                <button id="btn-hardskills"><a href="#destination-competences" onclick="showSection('hardskills')">Hard skills</a></button>
+                <button id="btn-softskills"><a href="#destination-competences" onclick="showSection('softskills')">Soft skills</a></button>
             </nav>
             <article id="hardskills">
                 <div>
@@ -159,12 +162,12 @@
                 </div>
             </article>
 
-            <h1>Projets</h1>
+            <h1 id="destination-projets">Projets</h1>
 
             <nav class="filtres">
-                <button id="btn-webdev"><a href="#" onclick="showSection('web-dev')">Développement web</a></button>
-                <button id="btn-webdesign"><a href="#" onclick="showSection('web-design')">Design web</a></button>
-                <button id="btn-mobile"><a href="#" onclick="showSection('mobile')">Développement mobile</a></button>
+                <button id="btn-webdev"><a href="#destination-projets" onclick="showSection('web-dev')">Développement web</a></button>
+                <button id="btn-webdesign"><a href="#destination-projets" onclick="showSection('web-design')">Design web</a></button>
+                <button id="btn-mobile"><a href="#destination-projets" onclick="showSection('mobile')">Développement mobile</a></button>
             </nav>
 
             <article id="web-dev">
@@ -172,28 +175,48 @@
                     <h2>Horloge multifonction</h2>
                     <img src="./images/horloge-theme.png" alt="horloge">
                     <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
-                    <p><strong>Fonctionnalités :</strong></br>Alarme et minuteur personnalisables</br>Chronomètre pour suivre le temps de nos tâches</br>Horloge mondiale pour voir l’heure dans différents pays</p>
                     <p><strong>Compétences : </strong>HTML, CSS, JavaScript, React, GitHub</p>
-                    <p>Lien source: <a href="https://ben-techplayer.github.io/chronometre/">Lien du site web</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/chronometre/">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Alarme et minuteur personnalisables</li>
+                        <li>Chronomètre pour suivre le temps de nos tâches</li>
+                        <li>Horloge mondiale pour voir l’heure dans différents pays</li>
+                    </ul>
+                    <p class="lien-projet">Lien source: 
+                        <a href="https://ben-techplayer.github.io/chronometre/">Lien du site web</a>
+                    </p>
+                    <p class="lien-projet">Lien GitHub: 
+                        <a href="https://github.com/Ben-TECHPlayer/chronometre/">Voir aussi sur GitHub</a>
+                    </p>
                 </div>
                 <div class="projet-item">
                     <h2>Site vitrine spécial Mondial 2026</h2>
                     <img src="./images/worldcup26.png" alt="coupedumonde">
                     <p><strong>Dates : </strong>Du 13 au 19 octobre 2025</p>
-                    <p><strong>Fonctionnalités :</strong></br>Site vitrine monopage</br>Formulaire interactif pour les fans</br>Design sur le thème du Mondial 2026</br>Disponible en français, anglais et espagnol</p>
                     <p><strong>Compétences : </strong>HTML, CSS, JavaScript, React, GitHub</p>
-                    <p>Lien source: <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Site vitrine monopage</li>
+                        <li>Formulaire interactif pour les fans</li>
+                        <li>Design sur le thème du Mondial 2026</li>
+                        <li>Disponible en français, anglais et espagnol</li>
+                    </ul>
+                    <p class="lien-projet">Lien source: <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a></p>
+                    <p class="lien-projet">Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026">Voir aussi sur GitHub</a></p>
                 </div>
                 <div class="projet-item">
                     <h2>Portfolio personnel</h2>
                     <img src="./images/portfolio-theme.png" alt="portfolio">
                     <p><strong>Dates : </strong>Du 24 septembre 2024 au 19 octobre 2025*</p>
                     <p><strong>Compétences : </strong>HTML, CSS, JavaScript, Visual Studio Code, Figma</p>
-                    <p><strong>Fonctionnalités :</strong></br>Mise en avant de mes compétences</br>Présentation de mes projets académiques et personnels</br>Ambitions pour mes futurs projets</p>
-                    <p>Lien source: <a href="https://ben-techplayer.github.io/portfolio/">Lien de mon portfolio</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/portfolio">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Mise en avant de mes compétences</li>
+                        <li>Présentation de mes projets académiques et personnels</li>
+                        <li>Ambitions pour mes futurs projets</li>
+                    </ul>
+                    <p class="lien-projet">Lien source: <a href="https://ben-techplayer.github.io/portfolio/">Lien de mon portfolio</a></p>
+                    <p class="lien-projet">Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/portfolio">Voir aussi sur GitHub</a></p>
                     <p>* <i>incluant des améliorations tout au long de mon portfolio</i></p>
                 </div>
                 <div class="projet-item">
@@ -201,30 +224,46 @@
                     <img src="./images/site-web-militaire.jpg" alt="website">
                     <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
                     <p><strong>Compétences : </strong>HTML, CSS, Responsive design, Notepad++, Flexbox, Grid, IFrame</p>
-                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
-                    <p>Lien source: <a href="https://ben-techplayer.github.io/formation-militaire-tactique/">Lien du site web</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/formation-militaire-tactique/">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Menu de navigation et contacts</li>
+                        <li>Page d'accueil contenant une vidéo fun, un texte argumentée</li>
+                        <li>Présentation des formations</li>
+                        <li>Formulaire pour l'inscription dans des formations souhaitées</li>
+                    </ul>
+                    <p class="lien-projet">Lien source: <a href="https://ben-techplayer.github.io/formation-militaire-tactique/">Lien du site web</a></p>
+                    <p class="lien-projet">Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/formation-militaire-tactique/">Voir aussi sur GitHub</a></p>
                 </div>
             </article>
 
             <article id="web-design">
                 <div class="projet-item">
-                    <h2>CIte Universitaire de Paris</h2>
-                    <img src="./images/site-web-militaire.jpg" alt="website">
-                    <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
+                    <h2>Cite Universitaire de Paris</h2>
+                    <img src="./images/ciup.jpg" alt="website">
+                    <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
                     <p><strong>Compétence : </strong>Figma</p>
-                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
-                    <p>Lien source: <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien du site web</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Menu de navigation</li>
+                        <li>Mise en page</li>
+                        <li>Interactions et scénarios utilisateurs</li>
+                    </ul>
+                    <p>Lien source de mes maquettes: <a class="lien-projet" href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a class="lien-projet" href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
                 </div>
                 <div class="projet-item">
                     <h2>Magic Music</h2>
-                    <img src="./images/site-web-militaire.jpg" alt="website">
+                    <img src="./images/magicmusic.png" alt="website">
                     <p><strong>Dates : </strong>Du 10 octobre 2023 au 24 janvier 2024</p>
                     <p><strong>Compétence : </strong>Figma</p>
-                    <p><strong>Fonctionnalités :</strong></br>Menu de navigation et contacts</br>Page d'accueil contenant une vidéo fun, un texte argumentée</br>Présentation des formations</br>Formulaire pour l'inscription dans des formations souhaitées</p>
-                    <p>Lien source: <a href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1/">Lien du site web</a></p>
-                    <p>Lien GitHub: <a href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Page d'accueil présentant ces maquettes</li>
+                        <li>Mise en page</li>
+                        <li>Interactions et scénarios utilisateurs</li>
+                    </ul>
+                    <p>Lien source de mes maquettes: <a class="lien-projet" href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1/">Lien du site web</a></p>
+                    <p>Lien GitHub: <a class="lien-projet" href="https://github.com/Ben-TECHPlayer/magic-music/">Voir aussi sur GitHub</a></p>
                 </div>
             </article>
 
@@ -233,23 +272,40 @@
                     <h2>Application Java sur la cité internationale universitaire de Paris</h2>
                     <img src="./images/ciup.jpg" alt="JO 2024">
                     <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
-                    <p><strong>Fonctionnalités :</strong></br>Recueil de besoins</br>Maquettes interactives</br>Programmation orienté objet</br>Création et suppression des maisons</br>Gestion des menus des restos U</br>Gestion des maisons</br>Inscription etudiant</p>
                     <p><strong>Compétences : </strong>Java Swing, Java, Figma, Office 365, GitLab, maquettage, leadership, gestion de projet, méthode agile, travail d'équipe</p>
+                    <p><strong>Fonctionnalités :</strong></p>
+                    <ul>
+                        <li>Recueil de besoins</li>
+                        <li>Maquettes interactives</li>
+                        <li>Programmation orienté objet</li>
+                        <li>Création et suppression des maisons</li>
+                        <li>Gestion des menus des restos U</li>
+                        <li>Gestion des maisons</li>
+                        <li>Inscription etudiant</li>
+                    </ul>
                 </div>
                 <div class="projet-item">
                     <h2>Application Java sur les Jeux Olympiques</h2>
                     <img src="./images/logoparis.png" alt="JO 2024">
                     <p><strong>Dates : </strong>Du 5 février au 17 juin 2024</p>
-                    <p><strong>Fonctionnalités :</strong></br>Recueil de besoins</br>Maquettes interactives</br>Programmation orienté objet</br>Création des équipes et des participants</br>Gestion des sessions</br>Résultats des épreuves en direct et en temps réel</p>
                     <p><strong>Compétences : </strong>UML, Java Swing, Java, Penpot, maquettage, PERT, GANTT, gestion de projet, PBS, WBS, travail d'équipe</p>
+                    <p><strong>Fonctionnalités :</strong>
+                    <ul>
+                        <li>Recueil de besoins</li>
+                        <li>Maquettes interactives</li>
+                        <li>Programmation orienté objet</li>
+                        <li>Création des équipes et des participants</li>
+                        <li>Gestion des sessions</li>
+                        <li>Résultats des épreuves en direct et en temps réel</li>
+                    </ul>
                 </div>
             </article>
 
-            <h1>Emplois</h1>
+            <h1 id="destination-emplois">Emplois</h1>
             <article id="panel-emplois">
                 <div class="emplois-item">
                     <h2>Vendeur polyvalent</h2>
-                    <img src="./images/pastry.jpeg" class="img-fluid">
+                    <img src="./images/primark.jpg_large" class="img-fluid">
                     <p><strong>Année :</strong> 2025</p>
                     <p><strong>Entreprise :</strong> PRIMARK</p>
                     <p><strong>Lieu :</strong> Serris, Île-de-France, France</p>
@@ -278,29 +334,21 @@
             </article>
 
             <div id="embauche">
-                <div class="cv" href="CV_Stage_ABOUDOU_Ben-Ali.pdf">
+                <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" class="cv" download="CV_Stage_ABOUDOU_Ben-Ali">
                     <img src="./images/pdf.png" alt="download-cv">
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali" class="cv-button">Télécharger mon CV</a>
-                </div>
-                <div class="cv" href="CV_Stage_ABOUDOU_Ben-Ali.pdf">
+                    <p class="cv-button">Télécharger le CV</p>
+                </a>
+                <a class="cv" href="CV_Stage_ABOUDOU_Ben-Ali.pdf" >
                     <img src="./images/pdf.png" alt="watch-cv">
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" class="cv-button">Regarder mon CV</a>
-                    <!-- <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali"><img src="./images/code-qr-download-cv.png" alt="me">Télécharger mon CV</a> -->
-                    <!-- <h2 style="color: blue; text-align: center;">CV</h2>
-                    <a href="CV_Stage_ABOUDOU_Ben-Ali.pdf" download="CV_Stage_ABOUDOU_Ben-Ali">Mon CV</a> -->
-                </div>
-                <!-- <div class="ux-design">
-                    <h2 style="color: blue; text-align: center;">Maquettes Figma</h2>
-                    <a href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1">Magic Music</a>
-                    <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1">Cité Universitaire de Paris</a>
-                </div> -->
+                    <p class="cv-button">Regarder mon CV</p>
+                </a>
             </div>
             
         </main>
         <footer>
             <div class="droits-auteur">
                 <p>© 2025 Ben-Ali ABOUDOU. Tous droits réservés.</p>
-                <p>Étudiant en BUT Informatique à l'IUT d'Orsay</p>
+                <p style="margin-top: -0.5rem;">Étudiant en BUT Informatique à l'IUT d'Orsay</p>
             </div>
             <div class="contact-icons">
                 <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>
@@ -309,7 +357,6 @@
                 <a href="https://git.iut-orsay.fr/baboudo"> <img src="./images/gitlab.png" alt="GitLab"></a> 
                 <a href="https://youtube.fr/@Ben_CR7"> <img src="./images/youtube.png" alt="Youtube"></a> 
             </div>
-            
         </footer>
     </body>
     <script>

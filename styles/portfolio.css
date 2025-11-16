@@ -1,36 +1,29 @@
 html {
-    margin: 0;
-    padding: 0;
+    scroll-behavior: smooth;
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@media (min-width: 1150px) {
+    header, main{
+        margin: 0 4rem 0 4rem;
+        padding: 0 4rem 0 4rem;
+    }
+
+    footer{
+        margin: 0 2rem 0 2rem;
+        padding: 0 2rem 0 2rem;
+    }
 }
 
 body{
     background-color: snow;
 }
 
-/* header h1{
-    color: #b2995a;
-    text-align: center;
-} */
-
 header h1 a{
     text-decoration: none;
-    color: #b2995a;
+    color: #007bff;
     text-align: center;
 }
-
-/* Style de base */
-/* header {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-} */
-
-/* h1 a {
-  text-decoration: none;
-  color: #b2995a;
-  font-size: 1.5rem;
-  font-weight: 600;
-} */
 
 .header-container {
   display: flex;
@@ -42,9 +35,8 @@ header h1 a{
 
 .menu {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
-  transition: all 0.5s ease-in-out;
 }
 
 .menu a {
@@ -53,12 +45,23 @@ header h1 a{
   font-weight: 500;
 }
 
-.btn-contact {
-  background-color: #007bff;
-  color: white;
+.menu a:hover{
+    color: #007bff;
+    transition: ease-in 0.3s;
+}
+
+.menu a.btn-contact {
+  background: none;
+  color: #007bff;
   padding: 0.5rem 1rem;
+  border: 2px solid #007bff;
   border-radius: 5px;
-  float: right;
+}
+
+.menu a.btn-contact:hover {
+    background-color: #007bff;
+    color: white;
+    transition: ease-in 0.3s;
 }
 
 /* Bouton hamburger */
@@ -73,14 +76,19 @@ header h1 a{
 /* Responsive */
 @media (max-width: 768px) {
   .menu {
-    display: none;
+    max-height: 0;              /* caché */
+    overflow: hidden;           /* masque le contenu */
     flex-direction: column;
+    align-items: flex-end;
     width: 100%;
     margin-top: 1rem;
+    opacity: 0;                 /* invisible */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 
   .menu.show {
-    display: flex;
+    max-height: 500px;          /* hauteur suffisante pour contenir les liens */
+    opacity: 1;                 /* visible */
   }
 
   .menu-toggle {
@@ -89,74 +97,6 @@ header h1 a{
 }
 
 
-/*.header-container{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: space-around;
-}
-
-@media (max-width: 1150px) {
-    .header-container{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: space-around;
-    }
-}
-
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-}
-
-@media (max-width: 1150px) {
-    .menu{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,auto);
-    }
-}
-
-@media (max-width: 400px) {
-    .menu{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.menu button.active {
-    color: blue;
-}
-
- .menu button{
-    padding: 15px;
-    border-radius: 12px;
-    border: none;
-    background: none;
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-} 
-
-.menu a {
-    padding: 15px;
-    border-radius: 12px;
-    border: none;
-    background: none;
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
-    color: inherit; 
-}
-
-.menu a:hover {
-    color: blue;
-    transition: ease-in 0.3s;
-}*/
-
 #profile-container{
     text-align: center;
     width: 100%;
@@ -164,8 +104,8 @@ header h1 a{
 
 #panel-formations {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     padding: 10px;
 }
 
@@ -182,18 +122,16 @@ header h1 a{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-start;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
-    background-color: yellow;
+    background-color: #007bff;
+    color: white
 }
 
 #panel-formations .formation-item img {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 70px;
+    /* width: 50px; */
     height: auto;
     padding: 10px;
     flex-shrink: 0;
@@ -202,6 +140,35 @@ header h1 a{
 #panel-formations .formation-item h2, #panel-formations .formation-item p {
     margin: 10px 0 0 10px;
 }
+
+#panel-formations .formation-title {
+  display: flex;
+  flex-wrap: wrap;              /* permet le retour à la ligne */
+  justify-content: space-between; /* titre à gauche, image à droite */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#panel-formations .formation-title h2 {
+  flex: 1 1 auto;               /* le titre occupe l’espace restant */
+}
+
+#panel-formations .formation-title img {
+  flex: 0 0 auto;               /* l’image garde sa taille */
+  max-width: 350px;             /* ajuste selon ton besoin */
+  height: auto;
+}
+
+
+
+@media (max-width: 768px) {
+  #panel-formations .formation-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 
 .filtres{
     display: flex;
@@ -236,16 +203,20 @@ header h1 a{
 }
 
 .filtres button:hover {
-    color: yellow;
+    color: #007bff;
     transition: ease-in 0.3s;
-}
-
-.filtres button:active {
-    color: yellow;
 }
 
 article div p{
     font-weight: 600;
+}
+
+#hardskills li, #softskills li{
+    font-size: 1.3rem;
+}
+
+#hardskills ul, #softskills ul{
+    margin-top: -0.5rem;
 }
 
 #hardskills div, #softskills div {
@@ -254,13 +225,12 @@ article div p{
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-start;
-    box-shadow: 0 0 20px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    background-color: yellow;
-    /*height: auto;
-     min-height: 150px; */
+    box-shadow: 0 0 10px black;
+    background-color: #007bff;
+    color: white;
 }
 
 #hardskills {
@@ -277,25 +247,8 @@ article div p{
     padding: 10px;
 }
 
-@media (max-width: 1260px) {
-    #hardskills, #softskills {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        padding: 10px;
-    }
-}
 
-@media (max-width: 1020px){
-    #hardskills, #softskills {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 700px){
+@media (max-width: 860px){
     #hardskills, #softskills {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -319,15 +272,30 @@ article div p{
     }
 }
 
-#softskills {
+#web-design, #mobile {
     display: none;
 }
 
 #web-dev, #web-design, #mobile {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
     gap: 20px; /* Espace entre les colonnes */
     padding: 10px;
+}
+
+@media (max-width: 675px) {
+    #web-dev, #web-design, #mobile{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+#web-dev .projet-item li, #web-design .projet-item li, #mobile .projet-item li{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#web-dev .projet-item ul, #web-design .projet-item ul, #mobile .projet-item ul{
+    margin-top: -1rem;
 }
 
 #web-dev .projet-item, #web-design .projet-item, #mobile .projet-item {
@@ -336,11 +304,11 @@ article div p{
     flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
     justify-content: flex-start; /* Aligner le contenu en haut */
     align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
-    box-shadow: 0 0 20px black;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
-    background-color: yellow;
+    padding: 20px;box-shadow: 0 0 10px black;
+    background-color: #007bff;
+    color: white;
 }
 
 #web-dev .projet-item img, #web-design .projet-item img, #mobile .projet-item img {
@@ -354,7 +322,6 @@ article div p{
 } */
 
 .projet-item p{
-    color: black;
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -377,11 +344,12 @@ article div p{
     flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
     justify-content: flex-start; /* Aligner le contenu en haut */
     align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
-    box-shadow: 0 0 20px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    background-color: yellow;
+    box-shadow: 0 0 10px black;
+    background-color: #007bff;
+    color: white;
 }
 
 #panel-emplois img{
@@ -392,10 +360,18 @@ article div p{
     height: auto;
 }
 
-#panel-emplois .emplois-item p{
-    color: black;
+#panel-emplois .emplois-item p, #panel-emplois .emplois-item ul li{
     font-size: 1.2rem;
     font-weight: 500;
+}
+
+#web-dev .projet-item p a, #web-design .projet-item p a, #mobile .projet-item p a{
+    text-decoration: none;
+    color: white;
+}
+
+#web-dev .projet-item .lien-projet, #web-design .projet-item .lien-projet, #mobile .projet-item .lien-projet{
+    color: black;
 }
 
 #panel-emplois .emplois-item p strong{
@@ -529,20 +505,20 @@ img{
   width: 150px;
   margin: 10px;
   text-align: center;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 12px;
   padding: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* background-color: #f9f9f9; */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
 .cv img {
-  width: 30%;
+  width: 10%;
   height: auto;
   border-radius: 8px;
 }
 
-.cv p {
+.cv .cv-button {
   margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
@@ -558,46 +534,38 @@ img{
     gap: 20px;
 }
 
-#embauche .ux-design, #embauche .cv {
+#embauche .cv {
     flex: 1;
     min-width: 300px; /* pour éviter que ça devienne trop petit */
 }
 
-button.cv-button{
+button .cv-button{
     background: none;
     border: 1px solid red;
 }
 
-button.cv-button a{
+a.cv{
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;  /* Retire le soulignement des liens */
     color: red;
+    border: 1px solid red;
 }
 
-#embauche .cv a{
+#embauche .cv p{
     text-decoration: none;
     font-size: 19px;
-    color: black;
+    color: red;
     display: block;
     width: fit-content;
     margin: 0 auto;
 }
 
-#embauche .cv a, #embauche .ux-design a{
+#embauche .ux-design a{
     font-weight: 600;
 }
 
-#embauche .ux-design a{
-    display: block;
-    margin-left: 20px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 19px;
-    color: black;
-}
-
-#embauche .ux-design a:hover, #embauche .cv a:hover{
+#embauche .cv a:hover{
     color: magenta;
 }
 
@@ -609,7 +577,13 @@ footer {
     padding: 10px;
 }
 
-footer.droits-auteur{
+@media (max-width: 675px) {
+    footer{
+        flex-direction: column;
+    }
+}
+
+footer .droits-auteur{
     text-align: center;
 }
 
