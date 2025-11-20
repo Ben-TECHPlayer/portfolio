@@ -124,8 +124,8 @@ main h1{
     position: relative;
     /* display: flex;
     flex-direction: column; 
-    justify-content: flex-start;  */
-    align-items: flex-start;
+    justify-content: flex-start; 
+    align-items: flex-start; */
     box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
     border-radius: 10px;
