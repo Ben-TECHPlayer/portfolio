@@ -122,9 +122,9 @@ main h1{
 
 #panel-formations .formation-item{
     position: relative;
-    display: flex;
+    /* display: flex;
     flex-direction: column; 
-    justify-content: flex-start; 
+    justify-content: flex-start;  */
     align-items: flex-start;
     box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
