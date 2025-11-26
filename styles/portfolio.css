@@ -19,6 +19,125 @@ body{
     background-color: snow;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+img#modal-image{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+#modal-extra{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px black;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+#web-dev .projet-piece, #web-design .projet-piece, #mobile .projet-piece, #panel-emplois .projet-piece{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #007bff;
+}
+
+#web-dev .projet-piece .projet-image img, #web-design .projet-piece .projet-image img, #mobile .projet-piece .projet-image img, #panel-emplois .projet-piece .projet-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border-bottom: 1px solid black;
+}
+
+#web-dev .projet-piece .projet-image, #web-design .projet-piece .projet-image, #mobile .projet-piece .projet-image, #panel-emplois .projet-piece .projet-image { 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+#web-dev .projet-piece .projet-text, #web-design .projet-piece .projet-text, #mobile .projet-piece .projet-text, #panel-emplois .projet-piece .projet-text{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    padding: 20px;
+    color: white;
+}
+
+#web-dev .projet-piece .projet-skills, #web-design .projet-piece .projet-skills, #mobile .projet-piece .projet-skills, #panel-emplois, .projet-piece .projet-skills{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    margin: 0 20px 20px;
+    gap: 15px;
+}
+
+#web-dev .projet-piece .skill-item, #web-design .projet-piece .skill-item, #mobile .projet-piece .skill-item, #panel-emplois .projet-piece .skill-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    gap: 15px;
+}
+
+#web-dev .projet-piece .skill-item img, #web-design .projet-piece .skill-item img, #mobile .projet-piece .skill-item img, #panel-emplois .projet-piece .skill-item img{
+    width: 30px;
+    height: auto;
+}
+
+#web-dev .projet-piece .skill-item p, #web-design .projet-piece .skill-item p, #mobile .projet-piece .skill-item p, #panel-emplois .projet-piece .skill-item p{
+    color: white;
+    font-weight: 500;
+}
+
 header h1 a{
     text-decoration: none;
     color: #007bff;
@@ -122,10 +241,10 @@ main h1{
 
 #panel-formations .formation-item{
     position: relative;
-    /* display: flex;
+    display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
-    align-items: flex-start; */
+    align-items: flex-start;
     box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -219,10 +338,23 @@ article div p{
 
 #hardskills li, #softskills li{
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+#hardskills li img, #softskills li img{
+    width: 30px;
+    height: auto;
 }
 
 #hardskills ul, #softskills ul{
     margin-top: -0.5rem;
+}
+
+#hardskills ul{
+    list-style: none;
 }
 
 #hardskills div, #softskills div {
@@ -241,7 +373,7 @@ article div p{
 
 #hardskills {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 10px;
 }

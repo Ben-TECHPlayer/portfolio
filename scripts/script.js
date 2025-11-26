@@ -54,4 +54,3 @@ function showSection(sectionId) {
         mobileBtn.style.color = '#007bff';
     } 
 }
-
