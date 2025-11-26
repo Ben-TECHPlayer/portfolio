@@ -10,7 +10,7 @@ Ce site est composé de plusieurs pages HTML :
 
 Chaque page est stylisée avec du CSS dédié et enrichie de JavaScript pour une meilleure interactivité.
 
-## 🎯 Objectif
+## 🎯 Objectifs
 
 L’objectif principal de ce portfolio est de :
 - Présenter mon profil aux recruteurs et enseignants
