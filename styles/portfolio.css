@@ -3,14 +3,14 @@ html {
     font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1150px) {
     header, main{
         margin: 0 4rem 0 4rem;
         padding: 0 4rem 0 4rem;
     }
 
     footer{
-        padding: 0 2rem 0 2rem;
+        padding: 4rem 2rem 0 2rem;
     }
 }
 
