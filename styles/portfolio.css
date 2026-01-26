@@ -524,6 +524,14 @@ footer {
     color: white;
 }
 
+@media(max-width: 400px){
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
 footer .droits-auteur{
     text-align: center;
 }
@@ -537,6 +545,6 @@ footer .droits-auteur{
 }
 
 .contact-icons img {
-    width: 30px; /* Taille des images */
+    width: 30px; 
     height: auto;
 }
