@@ -464,10 +464,10 @@ article div p{
 
 #embauche {
     display: flex;
-    justify-content: space-around; /* espace entre les deux blocs */
+    justify-content: space-around; 
     align-items: flex-start;
-    flex-wrap: wrap; /* pour que ça s'adapte sur mobile */
-    margin: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
     gap: 20px;
 }
 
@@ -479,7 +479,7 @@ article div p{
 
 #embauche .cv {
     flex: 1;
-    min-width: 300px; /* pour éviter que ça devienne trop petit */
+    min-width: 300px; 
 }
 
 button .cv-button{
