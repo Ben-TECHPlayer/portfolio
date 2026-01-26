@@ -240,7 +240,7 @@ main h1{
     align-items: center;
 }
 
-@media(max-width: 350px){
+@media(max-width: 500px){
     .filtres{
         flex-direction: column;
         gap: 0px;
