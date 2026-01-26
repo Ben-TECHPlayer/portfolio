@@ -524,7 +524,7 @@ footer {
     color: white;
 }
 
-@media(max-width: 450px){
+@media(max-width: 595px){
     footer {
         display: flex;
         justify-content: center;
