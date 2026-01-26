@@ -15,6 +15,7 @@ html {
 }
 
 body{
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: snow;
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@ main{
     border: 1px solid black;
     border-radius: 15px;
     background-color: #007bff;
+    overflow-x: auto;
 }
 
 #web-dev .projet-piece .projet-image img, #web-design .projet-piece .projet-image img, #mobile .projet-piece .projet-image img, #panel-emplois .projet-piece .projet-image img{
@@ -130,7 +132,6 @@ header h1 a{
     transition: ease-in 0.3s;
 }
 
-/* Bouton hamburger */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -139,22 +140,21 @@ header h1 a{
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .menu {
-    max-height: 0;              /* caché */
-    overflow: hidden;           /* masque le contenu */
+    max-height: 0;  
+    overflow: hidden;  
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
     margin-top: 1rem;
-    opacity: 0;                 /* invisible */
+    opacity: 0; 
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 
   .menu.show {
-    max-height: 500px;          /* hauteur suffisante pour contenir les liens */
-    opacity: 1;                 /* visible */
+    max-height: 500px; 
+    opacity: 1;
   }
 
   .menu-toggle {
@@ -176,7 +176,6 @@ main h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    padding: 10px;
 }
 
 @media (max-width: 700px){
@@ -191,7 +190,6 @@ main h1{
     display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
-    /* align-items: flex-start; */
     box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -200,33 +198,26 @@ main h1{
     color: white
 }
 
-#panel-formations .formation-item img {
-    /* width: 50px; */
-    /* height: auto; */
-    padding: 10px;
-    flex-shrink: 0;
-}
-
 #panel-formations .formation-item h2, #panel-formations .formation-item p {
     margin: 10px 0 0 10px;
 }
 
 #panel-formations .formation-title {
   display: flex;
-  /* flex-wrap: wrap;  */
   justify-content: space-between; 
   align-items: center;
   margin-bottom: 1rem;
 }
 
 #panel-formations .formation-title h2 {
-  flex: 1 1 auto;               /* le titre occupe l’espace restant */
+  flex: 1 1 auto; 
 }
 
 #panel-formations .formation-title img {
-  flex: 0 0 auto;               /* l’image garde sa taille */
-  width: 15%;             /* ajuste selon ton besoin */
+  flex: 0 0 auto; 
+  width: 15%; 
   height: auto;
+  padding: 10px
 }
 
 @media (max-width: 768px) {
@@ -251,11 +242,8 @@ main h1{
 
 @media(max-width: 350px){
     .filtres{
-        display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         gap: 0px;
-        /* align-items: center; */
     }
 }
 
@@ -270,8 +258,8 @@ main h1{
 .filtres button a {
     font-weight: 500;
     font-size: 18px;
-    text-decoration: none;  /* Retire le soulignement des liens */
-    color: inherit;         /* Optionnel : pour hériter de la couleur du texte parent */
+    text-decoration: none; 
+    color: inherit;
 }
 
 .filtres button:hover {
@@ -322,14 +310,12 @@ article div p{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 10px;
 }
 
 #softskills {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 10px;
 }
 
 
@@ -338,7 +324,6 @@ article div p{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 10px;
     }
 }
 
@@ -347,7 +332,6 @@ article div p{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-        padding: 10px;
     }
 }
 
@@ -363,9 +347,9 @@ article div p{
 
 #web-dev, #web-design, #mobile {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
-    gap: 20px; /* Espace entre les colonnes */
-    padding: 10px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    overflow-x: auto;
 }
 
 @media (max-width: 675px) {
@@ -401,11 +385,6 @@ article div p{
     height: auto;
 }
 
-/* #but h2 {
-    text-align: left; 
-    margin-bottom: 10px;
-} */
-
 .projet-item p{
     font-size: 1.2rem;
     font-weight: 500;
@@ -420,29 +399,8 @@ article div p{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
     gap: 20px; /* Espace entre les colonnes */
-    padding: 10px;
-}
-
-#panel-emplois .emplois-item {
-    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
-    display: flex;
-    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
-    justify-content: flex-start; /* Aligner le contenu en haut */
-    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px black;
-    background-color: #007bff;
-    color: white;
-}
-
-#panel-emplois img{
-   /* position: absolute;
-    top: 20px;
-    right: 10px; */
-    width: 100%; 
-    height: auto;
+    margin: -1px;
+    overflow-x: auto;
 }
 
 #panel-emplois .emplois-item p, #panel-emplois .emplois-item ul li{
@@ -487,11 +445,8 @@ article div p{
   width: 150px;
   margin: 10px;
   text-align: center;
-  /* border: 1px solid #ccc; */
   border-radius: 12px;
   padding: 10px;
-  /* background-color: #f9f9f9; */
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
 .cv img {
@@ -514,6 +469,12 @@ article div p{
     flex-wrap: wrap; /* pour que ça s'adapte sur mobile */
     margin: 20px;
     gap: 20px;
+}
+
+@media (max-width: 670px){
+    #embauche{
+        flex-direction: column;
+    }
 }
 
 #embauche .cv {
@@ -571,17 +532,11 @@ footer .droits-auteur{
     text-align: center;
 }
 
-/* footer h1 {
-    color: blue;
-    text-align: center;
-    margin-bottom: 20px;
-} */
-
 .contact-icons {
     float: right;
     display: flex;
-    justify-content: center; /* Centrer les icônes horizontalement */
-    gap: 20px; /* Espacement entre les icônes */
+    justify-content: center; 
+    gap: 20px;
 }
 
 @media(max-width: 400px){
