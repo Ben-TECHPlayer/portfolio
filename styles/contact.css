@@ -13,7 +13,9 @@ section form{
     background-color: beige;
     border-radius: 15px;
     margin-bottom: 4rem;
+    overflow-x: auto;
 }
+
 section form input, section form textarea{
     display: block;
     width: auto; 
@@ -38,5 +40,5 @@ section form input[type=submit]:hover {
     background-color: #007bff;
     color: white;
     transition: ease-in 0.3s;
-
 }
+
