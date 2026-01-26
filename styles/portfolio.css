@@ -524,12 +524,6 @@ footer {
     color: white;
 }
 
-@media (max-width: 675px) {
-    footer{
-        flex-direction: column;
-    }
-}
-
 footer .droits-auteur{
     text-align: center;
 }
