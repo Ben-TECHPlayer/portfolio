@@ -35,7 +35,7 @@ main{
     /* overflow-x: auto; */
 }
 
-#web-dev .projet-piece .projet-infos-container, #web-design .projet-piece .projet-infos-container, #mobile .projet-piece .projet-infos-container, #panel-emplois .projet-piece .projet-infos-container{
+#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container, #panel-emplois .projet-piece .projet-infos-container-scroll .projet-infos-container{
     overflow-x: auto;
 }
 
