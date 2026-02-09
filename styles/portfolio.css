@@ -32,7 +32,6 @@ main{
     border: 1px solid black;
     border-radius: 15px;
     background-color: #007bff;
-    /* overflow-x: auto; */
 }
 
 #web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container, #panel-emplois .projet-piece .projet-infos-container-scroll .projet-infos-container{
@@ -40,7 +39,7 @@ main{
 }
 
 #web-dev .projet-piece .projet-image img, #web-design .projet-piece .projet-image img, #mobile .projet-piece .projet-image img, #panel-emplois .projet-piece .projet-image img{
-    width: 110%;
+    width: 100%;
     height: auto;
     border-bottom: 1px solid black;
 }
