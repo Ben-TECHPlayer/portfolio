@@ -89,6 +89,11 @@ main{
     font-weight: 500;
 }
 
+#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a{
+    color: white;
+    text-decoration: none;
+}
+
 header h1 a{
     text-decoration: none;
     color: #007bff;
