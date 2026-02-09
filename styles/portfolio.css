@@ -94,6 +94,14 @@ main{
     text-decoration: none;
 }
 
+#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover{
+    text-decoration: underline;
+}
+
+#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a::after, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a::after, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a::after{
+    color: white;
+}
+
 header h1 a{
     text-decoration: none;
     color: #007bff;
