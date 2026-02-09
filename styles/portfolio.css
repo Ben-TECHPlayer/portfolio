@@ -36,9 +36,8 @@ main{
 }
 
 #web-dev .projet-piece .projet-image img, #web-design .projet-piece .projet-image img, #mobile .projet-piece .projet-image img, #panel-emplois .projet-piece .projet-image img{
-    width: 100%;
+    width: 110%;
     height: auto;
-    border-radius: 10px;
     border-bottom: 1px solid black;
 }
 
