@@ -30,7 +30,6 @@ main{
 
 #web-dev .projet-piece, #web-design .projet-piece, #mobile .projet-piece, #panel-emplois .projet-piece{
     border: 1px solid black;
-    border-radius: 15px;
     background-color: #007bff;
 }
 
