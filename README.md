@@ -4,9 +4,8 @@ Bienvenue sur le dépôt GitHub de mon **portfolio web personnel**. Ce site vitr
 
 ## 🌐 Aperçu
 
-Ce site est composé de plusieurs pages HTML :
+Ce site est composé d'une simple page HTML :
 - `index.html` : Portfolio
-- `contact.html` : Formulaire
 
 Chaque page est stylisée avec du CSS dédié et enrichie de JavaScript pour une meilleure interactivité.
 
