@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="google-site-verification" content="Y4SEIO62Aqxy9BerhgrqSNELrCXSSOSSCbjJxNBI4uU" />
+        <title>Formulaire de contact</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/portfolio.css">
+        <link rel="stylesheet" href="./styles/contact.css">
+        <script src="./scripts/script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <h1><a href="./index.html">Ben.</a></h1>
+                <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+                <nav class="menu">
+                    <a href="./index.html#destination-formations">Formations</a>
+                    <a href="./index.html#destination-competences">Compétences</a>
+                    <a href="./index.html#destination-projets">Projets</a>
+                    <a href="./index.html#destination-emplois">Emplois</a>
+                    <a href="./contact.html" class="btn-contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <form action="https://api.web3forms.com/submit" method="post">
+                    <legend>Contactez-nous</legend>
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="text" id="last-name" name="nom" placeholder="Votre nom" />
+                    <input type="text" id="first-name" name="prenom" placeholder="Votre prénom" />
+                    <input type="email" id="mail" name="adresse-mail" placeholder="Votre adresse-mail" />
+                    <textarea id="message" name="avis" rows="6" placeholder="Votre message"></textarea>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <input type="submit" id="envoyer" name="validation" value="Envoyer"/>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="droits-auteur">
+                <p>© 2026 Ben-Ali ABOUDOU. Tous droits réservés.</p>
+                <p style="margin-top: -0.5rem;">Étudiant en BUT Informatique à l'IUT d'Orsay</p>
+            </div>
+            <div class="contact-icons">
+                <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>
+                <a href="http://www.linkedin.com/in/ben-ali-aboudou-9a412b269/"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Ben-TECHPlayer"><img src="./images/github.png" alt="GitHub"></a>
+                <a href="https://youtube.fr/@Ben_CR7"> <img src="./images/youtube.png" alt="Youtube"></a> 
+            </div>
+            
+        </footer>
+        <script>
+            const toggleBtn = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            toggleBtn.addEventListener('click', () => {
+                menu.classList.toggle('show');
+            });
+        </script>
+    </body>
+
+
+</html>
+
