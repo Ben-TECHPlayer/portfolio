@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Samsung Sharp Sans", "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @media (min-width: 1150px) {
@@ -15,7 +15,7 @@ html {
 }
 
 body{
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Samsung Sharp Sans", "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     background-color: snow;
     display: flex;
     flex-direction: column;
@@ -187,30 +187,29 @@ main h1{
 }
 
 #panel-formations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-direction: row;
     gap: 30px;
 }
 
-@media (max-width: 700px){
-    #panel-formations{
-        display: flex;
-        flex-direction: column;
-    }
+.panel-formations-scroll #panel-formations {
+    overflow-x: auto;
 }
 
 #panel-formations .formation-item{
     position: relative;
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
+    flex-direction: column;
+    justify-content: flex-start;
     box-shadow: 0 0 10px black;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
     background-color: #007bff;
     color: white;
-    overflow-x: auto;
+    /* overflow-x: auto; */
 }
 
 #panel-formations .formation-item h2, #panel-formations .formation-item p {
@@ -229,8 +228,8 @@ main h1{
 }
 
 #panel-formations .formation-title img {
-  flex: 0 0 auto; 
-  width: 15%; 
+  flex: 0 0 auto;
+  width: 15%;
   height: auto;
   padding: 10px
 }
@@ -310,8 +309,8 @@ article div p{
 #hardskills div, #softskills div {
     position: relative;
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -319,28 +318,19 @@ article div p{
     box-shadow: 0 0 10px black;
     background-color: #007bff;
     color: white;
-    overflow-x: auto;
+    /* overflow-x: auto; */
 }
 
 #hardskills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 #softskills {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-
-@media (max-width: 860px){
-    #hardskills, #softskills {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
 }
 
 @media (max-width: 500px){
@@ -362,16 +352,20 @@ article div p{
 }
 
 #web-dev, #web-design, #mobile {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     overflow-x: auto;
 }
 
-@media (max-width: 675px) {
+/* @media (max-width: 675px) {
     #web-dev, #web-design, #mobile{
         grid-template-columns: repeat(1, 1fr);
     }
+} */
+
+.hardskills-scroll #hardskills, .softskills-scroll #softskills{
+    overflow-x: auto;
 }
 
 #web-dev .projet-item li, #web-design .projet-item li, #mobile .projet-item li{
@@ -412,8 +406,8 @@ article div p{
 }
 
 #panel-emplois {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 colonnes égales */
+    display: flex;
+    flex-direction: row; /* 3 colonnes égales */
     gap: 20px; /* Espace entre les colonnes */
     margin: -1px;
     overflow-x: auto;

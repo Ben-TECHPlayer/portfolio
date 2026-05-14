@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta name="google-site-verification" content="Y4SEIO62Aqxy9BerhgrqSNELrCXSSOSSCbjJxNBI4uU" />
         <title>Formulaire de contact</title>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link href="https://fonts.cdnfonts.com/css/samsungone" rel="stylesheet">
         <link rel="stylesheet" href="./styles/portfolio.css">
         <link rel="stylesheet" href="./styles/contact.css">
         <script src="./scripts/script.js" defer></script>
@@ -29,11 +28,13 @@
             <section>
                 <form action="https://api.web3forms.com/submit" method="post">
                     <legend>Contactez-nous</legend>
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="text" id="last-name" name="nom" placeholder="Votre nom" />
-                    <input type="text" id="first-name" name="prenom" placeholder="Votre prénom" />
-                    <input type="email" id="mail" name="adresse-mail" placeholder="Votre adresse-mail" />
-                    <textarea id="message" name="avis" rows="6" placeholder="Votre message"></textarea>
+                    <input type="hidden" name="access_key" value="a38e143d-7397-4d7b-8638-f1ff4ea7f401">
+                    <input type="hidden" name="from_name" value="Portfolio Ben-Ali">
+                    <input type="hidden" name="redirect" value="https://api.web3forms.com/submit/success">
+                    <input type="text" id="last-name" name="nom" placeholder="Votre nom" required/>
+                    <input type="text" id="first-name" name="prenom" placeholder="Votre prénom" required/>
+                    <input type="email" id="mail" name="email" placeholder="Votre adresse-mail" required/>
+                    <textarea id="message" name="avis" rows="6" placeholder="Votre message" required></textarea>
                     <input type="submit" id="envoyer" name="validation" value="Envoyer"/>
                 </form>
             </section>

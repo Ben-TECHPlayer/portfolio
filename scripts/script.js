@@ -22,17 +22,17 @@ function showSection(sectionId) {
 
 
     if (sectionId === 'hardskills') {
-        hard.style.display = 'grid';
+        hard.style.display = 'flex';
         soft.style.display = 'none';
         hardBtn.style.color = '#007bff';
         softBtn.style.color = '';
     } else if (sectionId === 'softskills') {
         hard.style.display = 'none';
-        soft.style.display = 'grid';
+        soft.style.display = 'flex';
         hardBtn.style.color = '';
         softBtn.style.color = '#007bff';
     } else if (sectionId === 'web-dev') {
-        webdev.style.display = 'grid';
+        webdev.style.display = 'flex';
         webdesign.style.display = 'none';
         mobiledev.style.display = 'none';
         webdevBtn.style.color = '#007bff';
@@ -40,7 +40,7 @@ function showSection(sectionId) {
         mobileBtn.style.color = '';
     } else if (sectionId === 'web-design') {
         webdev.style.display = 'none';
-        webdesign.style.display = 'grid';
+        webdesign.style.display = 'flex';
         mobiledev.style.display = 'none';
         webdevBtn.style.color = '';
         webdesignBtn.style.color = '#007bff';
@@ -48,7 +48,7 @@ function showSection(sectionId) {
     } else if (sectionId === 'mobile') {
         webdev.style.display = 'none';
         webdesign.style.display = 'none';
-        mobiledev.style.display = 'grid';
+        mobiledev.style.display = 'flex';
         webdevBtn.style.color = '';
         webdesignBtn.style.color = '';
         mobileBtn.style.color = '#007bff';
