@@ -4,8 +4,9 @@ Bienvenue sur le dépôt GitHub de mon **portfolio web personnel**. Ce site vitr
 
 ## 🌐 Aperçu
 
-Ce site est composé d'une simple page HTML :
+Ce site est composé de deux simples pages HTML :
 - `index.html` : Portfolio
+- `contact.html` : Formulaire de contact
 
 Chaque page est stylisée avec du CSS dédié et enrichie de JavaScript pour une meilleure interactivité.
 
@@ -14,7 +15,7 @@ Chaque page est stylisée avec du CSS dédié et enrichie de JavaScript pour une
 L’objectif principal de ce portfolio est de :
 - Présenter mon profil aux recruteurs et enseignants
 - Mettre en valeur mes réalisations, mes atouts et mon évolution
-- Approfondir mes compétences en développement web, développement mobile et design web
+- Approfondir mes compétences en informatique
 
 ## 🛠️ Technologies utilisées
 
