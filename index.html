@@ -2,15 +2,18 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <link href="https://fonts.cdnfonts.com/css/samsungone" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
+        <link href="https://fonts.cdnfonts.com/css/samsungone" rel="stylesheet">
         <link rel="stylesheet" href="./styles/portfolio.css">
         <link rel="stylesheet" href="./styles/contact.css">
         <script src="./scripts/script.js" defer></script>
     </head>
     <body onload="showSection('hardskills'), showSection('web-dev')">
+        
+        <!-- L'entête de mon portfolio -->
         <header>
+            <!-- Div utile pour le flexbox du menu -->
             <div class="header-container">
                 <h1><a href="./index.html">Ben.</a></h1>
                 <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
@@ -19,96 +22,103 @@
                     <a href="#destination-competences">Compétences</a>
                     <a href="#destination-projets">Projets</a>
                     <a href="#destination-emplois">Emplois</a>
-                    <a href="#destination-formulaire" class="btn-contact">Contact</a>
+                    <a href="#destination-formulaire" class="bouton-contact">Contact</a>
                 </nav>
             </div>
         </header>
+
+        <!-- Le contenu principal de mon portfolio -->
         <main>
+            <!-- Mise en valeur de mon profil -->
             <div id="profile-container">
                 <div class="about-me">
-                    <h1 style="font-weight: 500; font-size: 3rem;">Ben-Ali ABOUDOU</h1>
-                    <h2 style="color: #007bff; font-weight: 500; font-size: 1.5rem;">Étudiant en deuxième année de BUT Informatique</h2>
-                    <p style="font-size: 20px;">Passionné par l'informatique, je suis motivé, disponible et engagé à la recherche d'un stage informatique pour une durée de trois mois dans le but d'approfondir mes compétences.</p>
-                    <p style="font-size: 20px;"><strong>Spécialités : </strong>développement web full-stack, design web, développement mobile</p>
+                    <h1>Ben-Ali ABOUDOU</h1>
+                    <h2>Étudiant en deuxième année de BUT Informatique</h2>
+                    <p>Passionné par l'informatique, je suis motivé, disponible et engagé à la recherche d'un stage informatique pour une durée de trois mois dans le but d'approfondir mes compétences.</p>
+                    <p><strong>Spécialités : </strong>développement web full-stack, design web et développement mobile</p>
                 </div>
             </div>
-            
+
+            <!-- Bloc de mes formations -->
             <h1 id="destination-formations">Formations</h1>
-            <div class="panel-formations-scroll">
+            <div class="panel-formations-scrollable">
                 <article id="panel-formations">
                     <div class="formation-item">
                         <div class="formation-title">
-                            <h2>Seconde générale et technologique</h2>
-                            <img src="./images/lycee-aristide-briand.png" class="img-fluid">
-                        </div>
-                        <p><strong>Période :</strong> 2020-2021</p>
-                        <p><span style="text-decoration: underline;">Passage au Bac STI2D</span></p>
-                        <p><strong>Certification :</strong> ASSR 2</p>
-                    </div>
-                    <div class="formation-item">
-                        <div class="formation-title">
                             <h2>BAC STI2D</h2>
-                            <img src="./images/lycee-modeste-leroy.png" class="img-fluid">
+                            <img src="./images/lycee-modeste-leroy.png" alt="Lycée Modeste Leroy" class="img-fluid">
                         </div>
-                        <p><strong>Période :</strong> 2021-2023</p>
-                        <p><span style="text-decoration: underline;">Mention assez bien</span></p>
-                        <p><strong>Certification :</strong> PIX</p>
+                        <p><strong>Période : 2021-2023</strong></p>
+                        <p><span style="text-decoration: underline;">Mention assez bien</span> avec la moyenne générale de 12,14/20</p>
+                        <p><strong>Certification PIX</strong></p>
                     </div>
+
                     <div class="formation-item">
                         <div class="formation-title">
                             <h2>BUT Informatique</h2>
-                            <img src="./images/iut-orsay.png" class="img-fluid">
+                            <img src="./images/iut-orsay.png" alt="IUT d'Orsay - Université Paris-Saclay" class="img-fluid">
                         </div>
-                        <p><strong>Période :</strong> 2023-2027</p>
+                        <p><strong>Période : 2023-2027</strong></p>
+                        <p><strong>Certifications LinkedIn :</strong></p>
+                        <ul style="margin-top: 0;" class="liste-certifications">
+                            <li><a href="https://www.linkedin.com/learning/certificates/0ba9ca8c66ec19ce0ac2198342b9237fed41325c666016a8be00562dc3a6de9b?trk=share_certificate">Certification Devenir développeur web full-stack</a></li>
+                            <li><a href="https://www.linkedin.com/learning/certificates/28e438c2ee097339b80d2025b4033754ab12d8532b9a19554bcad1e5b622a3f6?trk=share_certificate">Certification Devenir designer web</a></li>
+                            <li><a href="https://www.linkedin.com/learning/certificates/d67bf1a1c431e133671841b91828285162d9f179879eb5d83150ad90cca15211?trk=share_certificate">Certification Devenir développeur d'applications mobiles avec Android</a></li>
+                        </ul>
                     </div>
                 </article>
             </div>
 
+            <!-- Bloc de mes compétences -->
             <h1 id="destination-competences">Compétences</h1>
-            <nav class="filtres">
-                <button id="btn-hardskills"><a href="#destination-competences" onclick="showSection('hardskills')">Hard skills</a></button>
-                <button id="btn-softskills"><a href="#destination-competences" onclick="showSection('softskills')">Soft skills</a></button>
+
+            <!-- Système de filtres -->
+            <nav id="filtres" class="skills">
+                <button id="bouton-hardskills"><a href="#destination-competences" onclick="showSection('hardskills')">Hard Skills</a></button>
+                <button id="bouton-softskills"><a href="#destination-competences" onclick="showSection('softskills')">Soft Skills</a></button>
             </nav>
-            <div class="hardskills-scroll">         
+
+            <div class="hardskills-scrollable">
                 <article id="hardskills">
                     <div>
                         <h2>Développement web</h2>
                         <ul>
-                            <li><img style="width: 30px; height: auto;" src="./images/html.png" alt="skill">HTML</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/css.png" alt="skill">CSS</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/js.png" alt="skill">JavaScript</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/php.png" alt="skill">PHP</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/react.png" alt="skill">React</li>
+                            <li><img src="./images/html.png" alt="HTML">HTML</li>
+                            <li><img src="./images/css.png" alt="CSS">CSS</li>
+                            <li><img src="./images/js.png" alt="JS">JavaScript</li>
+                            <li><img src="./images/php.png" alt="PHP">PHP</li>
+                            <li><img src="./images/react.png" alt="React">React</li>
                         </ul>
                     </div>
                     <div>
-                        <h2>Design UX/UI, web</h2>
+                        <h2>Design web</h2>
                         <ul>
-                            <li><img style="width: 30px; height: auto;" src="./images/canva.png" alt="skill">Canva</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/figma.png" alt="skill">Figma</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/inkscape.png" alt="skill">Inkscape</li>
+                            <li><img src="./images/canva.png" alt="Canva">Canva</li>
+                            <li><img src="./images/figma.png" alt="Figma">Figma</li>
+                            <li><img src="./images/inkscape.png" alt="Inkscape">Inkscape</li>
                         </ul>
                     </div>
                     <div>
                         <h2>Développement mobile</h2>
                         <ul>
-                            <li><img style="width: 30px; height: auto;" src="./images/java.png" alt="skill">Java</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/typescript.png" alt="skill">TypeScript</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/android.png" alt="skill">Android Studio</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/react.png" alt="skill">React Native</li>
+                            <li><img src="./images/java.png" alt="Java">Java</li>
+                            <li><img src="./images/typescript.png" alt="TS">TypeScript</li>
+                            <li><img src="./images/android.png" alt="Android">Android Studio</li>
+                            <li><img src="./images/react.png" alt="React Native">React Native</li>
                         </ul>
                     </div>
                     <div>
                         <h2>Gestion de projet & DevOps</h2>
                         <ul>
-                            <li><img style="width: 30px; height: auto;" src="./images/scrum.png" alt="skill">Méthodes agiles(SCRUM)</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/gitlab.png" alt="skill">GitLab</li>
-                            <li><img style="width: 30px; height: auto;" src="./images/github.png" alt="skill">GitHub</li>
-                        </ul> 
+                            <li><img src="./images/scrum.png" alt="SCRUM">Méthodes agiles(SCRUM)</li>
+                            <li><img src="./images/gitlab.png" alt="GitLab">GitLab</li>
+                            <li><img src="./images/github.png" alt="GitHub">GitHub</li>
+                        </ul>
                     </div>
                 </article>
             </div>
-            <div class="softskills-scroll">    
+
+            <div class="softskills-scrollable">
                 <article id="softskills">
                     <div>
                         <h2>Comportement</h2>
@@ -136,356 +146,363 @@
                 </article>
             </div>
 
+            <!-- Bloc de mes projets informatiques -->
             <h1 id="destination-projets">Projets</h1>
 
-            <nav class="filtres">
-                <button id="btn-webdev"><a href="#destination-projets" onclick="showSection('web-dev')">Développement web</a></button>
-                <button id="btn-webdesign"><a href="#destination-projets" onclick="showSection('web-design')">Design web</a></button>
-                <button id="btn-mobile"><a href="#destination-projets" onclick="showSection('mobile')">Développement mobile</a></button>
+            <!-- Système de filtres -->
+            <nav id="filtres" class="projets">
+                <button id="bouton-webdev"><a href="#destination-projets" onclick="showSection('web-dev')">Développement web</a></button>
+                <button id="bouton-webdesign"><a href="#destination-projets" onclick="showSection('web-design')">Design web</a></button>
+                <button id="bouton-appdev"><a href="#destination-projets" onclick="showSection('app-dev')">Développement mobile</a></button>
             </nav>
 
-
+            <!-- Bloc de mes projets en développement web full-stack -->
             <article id="web-dev">
-                <div class="projet-piece">
+
+                <!-- Site vitrine spécial Mondial 2026 -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/homepage-worldcup26.png" alt="Quadruple" />
+                        <img src="./images/homepage-worldcup26.png" alt="Coupe du Monde 2026">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Site vitrine spécial Mondial 2026</h2>
-                                <p>Site vitrine mettant en avant la diversité du football et regroupant les pays qualifiés, afin d’offrir aux supporters un espace dédié pour suivre et soutenir leur nation.</p>
-                                <p><strong>Dates : </strong>Du 13 octobre 2025 au 9 février 2026</p>
+                                <p>Site vitrine mettant en avant la diversité du football et regroupant les pays qualifiés, afin d'offrir aux supporters un espace dédié pour suivre et soutenir leur nation.</p>
+                                <p><strong>Période : Du 13 octobre 2025 au 9 février 2026</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/html.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/html.png" alt="HTML">
                                     <p>HTML</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/css.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/css.png" alt="CSS">
                                     <p>CSS</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/js.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/js.png" alt="JS">
                                     <p>JavaScript</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/react.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/react.png" alt="React">
                                     <p>React</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/github.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/github.png" alt="GitHub">
                                     <p>GitHub</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
+                                </div>
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
-                                </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Site vitrine monopage</li>
                                 <li>Formulaire interactif destiné aux supporters</li>
-                                <li>Animations dynamiques pour enrichir l'expérience utilisateur</li>
+                                <li>Animations dynamiques pour enrichir l'interface utilisateur</li>
                             </ul>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Lien source: 
-                                <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a>
-                            </p>
-                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub: 
-                                <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026/">Voir aussi sur GitHub</a>
-                            </p>
+                            <p style="margin-bottom: -1rem; margin-left: 20px;" class="lien-projet">Lien source : <a href="https://ben-techplayer.github.io/site-vitrine-mondial-2026/">Lien du site web</a></p>
+                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub : <a href="https://github.com/Ben-TECHPlayer/site-vitrine-mondial-2026/">Voir aussi sur GitHub</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="projet-piece">
+
+                <!-- Tennis Clash Deck -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/tennis-clash-deck.png" alt="Quadruple" />
+                        <img src="./images/tennis-clash-deck.png" alt="Tennis Clash Deck">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Tennis Clash Deck</h2>
                                 <p>Création du site web permettant de générer automatiquement les meilleures combinaisons de lineup en fonction des cartes sélectionnées et de leurs niveaux.</p>
-                                <p><strong>Dates : </strong>Du 1 décembre 2025 au 9 février 2026</p>
+                                <p><strong>Période : Du 1 décembre 2025 au 9 février 2026</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/html.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/html.png" alt="HTML">
                                     <p>HTML</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/css.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/css.png" alt="CSS">
                                     <p>CSS</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/js.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/js.png" alt="JS">
                                     <p>JavaScript</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/react.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/react.png" alt="React">
                                     <p>React</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/github.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/github.png" alt="GitHub">
                                     <p>GitHub</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
+                                </div>
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
-                                </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Catalogue complet des cartes</li>
                                 <li>Algorithme glouton qui rend la génération de combinaisons fluide</li>
                                 <li>Maintenance régulière du site web sur les annonces dans la page d'accueil</li>
                             </ul>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Lien source: 
-                                <a href="https://ben-techplayer.github.io/tennis-clash-deck/">Lien du site web</a>
-                            </p>
-                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub: 
-                                <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck/">Voir aussi sur GitHub</a>
-                            </p>
+                            <p style="margin-bottom: -1rem; margin-left: 20px;" class="lien-projet">Lien source : <a href="https://ben-techplayer.github.io/tennis-clash-deck/">Lien du site web</a></p>
+                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub : <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck/">Voir aussi sur GitHub</a></p>
                         </div>
                     </div>
                 </div>
+
             </article>
 
+            <!-- Bloc de mes projets en design web -->
             <article id="web-design">
-                <div class="projet-piece">
+                <!-- Cité Universitaire de Paris -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/ciup.png" alt="horloge">
+                        <img src="./images/ciup.png" alt="Cité Universitaire de Paris">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Cité Universitaire de Paris</h2>
-                                <p>Conception de maquettes qui illustrent les parcours et les interactions utilisateurs de l'application CIUP</p>
-                                <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
+                                <p>Conception de maquettes qui illustrent les parcours et les interactions utilisateurs de l'application CIUP.</p>
+                                <p><strong>Période : Du 3 février au 16 juin 2025</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/figma.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/figma.png" alt="Figma">
                                     <p>Figma</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/gitlab.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/gitlab.png" alt="GitLab">
                                     <p>GitLab</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/word.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/word.png" alt="Word">
                                     <p>Word</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/powerpoint.png" alt="skill">
-                                    <p>Powerpoint</p>
+                                <div class="competence-item">
+                                    <img src="./images/powerpoint.png" alt="PowerPoint">
+                                    <p>PowerPoint</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Leadership</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Travail d'équipe</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Navigation et organisation des écrans</li>
                                 <li>Mise en page responsive et cohérente</li>
                                 <li>Conception d’interfaces utilisateur ergonomiques</li>
+                                <li>Tests utilisateur</li>
                             </ul>
-                            <p style="margin-left: 20px;">Lien source : <a class="lien-projet" href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien de mes maquettes</a></p>
+                            <p style="margin-left: 20px;" class="lien-projet">Lien source : <a href="https://www.figma.com/proto/twT9DISLzTvupC8coE4ETa/Projet-SAE1256---Maquettes-pr%C3%A9liminaires?node-id=2-2&t=nw7hLmo0yiYseSlF-1/">Lien de mes maquettes</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="projet-piece">
+
+                <!-- Magic Music -->
+                 <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/magicmusic.jpg" alt="musique">
+                        <img src="./images/magicmusic.jpg" alt="Magic Music">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Magic Music</h2>
-                                <p>Conception de maquettes qui illustrent les parcours et les interactions utilisateurs de l'application musicale</p>
-                                <p><strong>Dates : </strong>Du 5 au 12 février 2025</p>
+                                <p>Conception de maquettes qui illustrent les parcours et les interactions utilisateurs de l'application musicale.</p>
+                                <p><strong>Période : Du 5 au 12 février 2025</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/figma.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/figma.png" alt="Figma">
                                     <p>Figma</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/gitlab.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/gitlab.png" alt="GitLab">
                                     <p>GitLab</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/word.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/word.png" alt="Word">
                                     <p>Word</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/powerpoint.png" alt="skill">
-                                    <p>Powerpoint</p>
+                                <div class="competence-item">
+                                    <img src="./images/powerpoint.png" alt="PowerPoint">
+                                    <p>PowerPoint</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
+                                </div>
+                                <div class="qualite-item">
+                                    <p>Organisé</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Navigation et organisation des écrans</li>
                                 <li>Mise en page responsive et cohérente</li>
                                 <li>Conception d’interfaces utilisateur ergonomiques</li>
                             </ul>
-                            <p style="margin-left: 20px;">Lien source : <a class="lien-projet" href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1/">Lien de mes maquettes</a></p>
+                            <p style="margin-bottom: -1rem; margin-left: 20px;" class="lien-projet">Lien source : <a href="https://www.figma.com/proto/46MnTQSRMOFwLcPfeg14wU/TPIHM1?node-id=76-3319&t=bhiOR6DBAo2rZARX-1/">Lien de mes maquettes</a></p>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article id="mobile">
-                <div class="projet-piece">
+            <!-- Bloc de mes projets en développement d'applications -->
+            <article id="app-dev">
+                <!-- Tennis Clash Deck version mobile -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/tennis-clash-deck-mobile.png" alt="tennis-clash-deck" />
+                        <img src="./images/tennis-clash-deck-mobile.png" alt="Tennis Clash Deck">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Tennis Clash Deck</h2>
                                 <p>Création de l'application mobile permettant de générer automatiquement les meilleures combinaisons de lineup en fonction des cartes sélectionnées et de leurs niveaux.</p>
-                                <p><strong>Dates : </strong>Du 1 décembre 2025 au 30 janvier 2026</p>
+                                <p><strong>Période : Du 1 décembre 2025 au 9 février 2026</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/typescript.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/typescript.png" alt="TS">
                                     <p>TypeScript</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/react.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/react.png" alt="React Native">
                                     <p>React Native</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/github.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/github.png" alt="GitHub">
                                     <p>GitHub</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
+                                </div>
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
-                                </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Catalogue complet des cartes</li>
                                 <li>Algorithme glouton qui rend la génération de combinaisons fluide</li>
                                 <li>Maintenance régulière de l'application mobile sur les annonces dans la page d'accueil</li>
                             </ul>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Lien source: 
-                                <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck-mobile/releases/tag/v1.0.0/">Lien de l'application mobile à installer</a>
-                            </p>
-                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub: 
-                                <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck-mobile/">Voir aussi sur GitHub</a>
-                            </p>
+                            <p style="margin-bottom: -1rem; margin-left: 20px;" class="lien-projet">Lien source : <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck-mobile/releases/tag/v1.0.0/">Lien de l'application mobile pour installer l'appli</a></p>
+                            <p style="margin-left: 20px;" class="lien-projet">Lien GitHub : <a href="https://github.com/Ben-TECHPlayer/tennis-clash-deck-mobile/">Voir aussi sur GitHub</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="projet-piece">
+
+                <!-- Application Cité Universitaire de Paris -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img src="./images/ciup.png" alt="horloge">
+                        <img src="./images/ciup.png" alt="Cité Universitaire de Paris">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Application CIUP</h2>
                                 <p>Création d'application de gestion pour la Cité Universitaire de Paris à l’occasion de son centenaire.</p>
-                                <p><strong>Dates : </strong>Du 3 février au 16 juin 2025</p>
+                                <p><strong>Période : Du 3 février au 16 juin 2025</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/java.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/java.png" alt="Java">
                                     <p>Java</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/gitlab.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/gitlab.png" alt="GitLab">
                                     <p>GitLab</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/word.png" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/word.png" alt="Word">
                                     <p>Word</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/powerpoint.png" alt="skill">
-                                    <p>Powerpoint</p>
+                                <div class="competence-item">
+                                    <img src="./images/powerpoint.png" alt="PowerPoint">
+                                    <p>PowerPoint</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Leadership</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Travail d'équipe</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Recueil de besoins</li>
-                                <li>Maquettes interactives</li>
+                                <li>Conception de maquettes interactives</li>
                                 <li>Programmation orienté objet</li>
                                 <li>Création, gestion et suppression des maisons</li>
                                 <li>Consultation des menus des restos U</li>
@@ -496,189 +513,221 @@
                     </div>
                 </div>
 
-                <div class="projet-piece">
+                <!-- Application JO 2024 -->
+                <div class="projet-item">
                     <div class="projet-image">
-                        <img style="background-color: white;" src="./images/jo2024.jpg" alt="jo 2024">
+                        <img src="./images/jo2024.jpg" alt="JO 2024">
                     </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
+                    <div class="projet-infos-scrollable">
+                        <div class="projet-infos">
+                            <div class="projet-texte">
                                 <h2>Application JO 2024</h2>
                                 <p>Création d'application desktop dédiée à la gestion des Jeux Olympiques de Paris 2024.</p>
-                                <p><strong>Dates : </strong>Du 5 février au 17 juin 2024</p>
+                                <p><strong>Période : Du 5 février au 17 juin 2024</strong></p>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Compétences</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/java.png" alt="skill">
+                            <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                            <div class="projet-competences">
+                                <div class="competence-item">
+                                    <img src="./images/java.png" alt="Java">
                                     <p>Java</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/gantt.webp" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/gantt.webp" alt="PERT">
                                     <p>PERT</p>
                                 </div>
-                                <div class="skill-item">
-                                    <img src="./images/gantt.webp" alt="skill">
+                                <div class="competence-item">
+                                    <img src="./images/gantt.webp" alt="GANTT">
                                     <p>GANTT</p>
                                 </div>
                             </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
+                            <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                            <div class="projet-qualites">
+                                <div class="qualite-item">
                                     <p>Autonome</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
+                                <div class="qualite-item">
+                                    <p>Sérieux</p>
                                 </div>
-                                <div class="skill-item">
+                                <div class="qualite-item">
                                     <p>Organisé</p>
                                 </div>
-                                <div class="skill-item">
-                                    <p>Travail d'équipe</p>
-                                </div>
                             </div>
-                            <p style="margin-left: 20px; margin-bottom: -1rem;" class="lien-projet">Fonctionnalités :</p>
+                            <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Fonctionnalités clées :</p>
                             <ul style="color: white;">
                                 <li>Recueil de besoins</li>
-                                <li>Maquettes interactives</li>
+                                <li>Conception de maquettes interactives</li>
                                 <li>Programmation orienté objet</li>
-                                <li>Création des équipes et des participants</li>
+                                <li>Création, gestion et suppression des équipes et des participants</li>
                                 <li>Gestion des sessions</li>
-                                <li>Résultats des épreuves en direct et en temps réel</li>
+                                <li>Mise en place des résultats des épreuves en direct et en temps réel</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </article>
 
+            <!-- Bloc de mes emplois -->
             <h1 id="destination-emplois">Emplois</h1>
-            <article id="panel-emplois">
-                <div class="projet-piece">
-                    <div class="projet-image">
-                        <img src="./images/primark.png" alt="horloge">
-                    </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
-                                <h2>Vendeur polyvalent</h2>
+            <div class="panel-emplois-scrollable">
+                <article id="panel-emplois">
+                
+                    <!-- Vendeur polyvalent -->
+                    <div class="emploi-item">
+                        <div class="emploi-image">
+                            <img src="./images/primark.png" alt="PRIMARK Val d'Europe">
+                        </div>
+                        <div class="emploi-infos-scrollable">
+                            <div class="emploi-infos">
+                                <div class="emploi-texte">
+                                    <h2>Vendeur polyvalent</h2>
+                                    <p>J'ai fait un CDD considéré comme un job d'été dans un magasin Primark très fréquenté au vue de la période estivale incluant la rentrée des classes.</p>
+                                </div>
+                                <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                                <div class="emploi-lieu">
+                                    <div class="emploi-item">
+                                        <img src="./images/entreprise.png" alt="Entreprise">
+                                        <p>PRIMARK</p>
+                                    </div>
+                                    <div class="emploi-item">
+                                        <img src="./images/work.png" alt="Type de contrat">
+                                        <p>CDD</p>
+                                    </div>
+                                    <div class="emploi-item">
+                                        <img src="./images/duree.png" alt="Période">
+                                        <p>Août 2025</p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                                <div class="emploi-qualites">
+                                    <div class="qualite-item">
+                                        <p>Autonome</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Sérieux</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Organisé</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Travail d'équipe</p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Missions principales :</p>
+                                <ul style="color: white;">
+                                    <li>Accueil et fidélisation des clients</li>
+                                    <li>Pliage des vêtements</li>
+                                    <li>Maintien du rayon au propre</li>
+                                    <li>Gestion de la caisse</li>
+                                    <li>Gestion des cabines d'essayage</li>
+                                </ul>
+                                <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Résultats :</p>
+                                <ul style="color: white;">
+                                    <li>Adaptation rapide dans une équipe en environnement dynamique</li>
+                                    <li>Gestion de caisses dynamique et fluide</li>
+                                    <li>Top 5 du classement national PRIMARK</li>
+                                    <li>Contribution à la satisfaction client avec des retours positifs</li>
+                                </ul>
                             </div>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/entreprise.png" alt="skill">
-                                    <p>Primark</p>
-                                </div>
-                                <div class="skill-item">
-                                    <img src="./images/work.png" alt="skill">
-                                    <p>CDD</p>
-                                </div>
-                                <div class="skill-item">
-                                    <img src="./images/duree.png" alt="skill">
-                                    <p>Août 2025</p>
-                                </div>
-                            </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <p>Autonome</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Organisé</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Travail d'équipe</p>
-                                </div>
-                            </div>
-                            <p style="color: black; margin-left: 20px;">Missions :</p>
-                            <ul style="color: white; margin-top: -1rem;">
-                                <li>Accueil et fidélisation des clients</li>
-                                <li>Pliage des vêtements</li>
-                                <li>Maintien du rayon au propre</li>
-                                <li>Gestion de la caisse</li>
-                                <li>Gestion des cabines d'essayage</li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="projet-piece">
-                    <div class="projet-image">
-                        <img src="./images/pastry.png" alt="horloge">
-                    </div>
-                    <div class="projet-infos-container-scroll">
-                        <div class="projet-infos-container">
-                            <div class="projet-text">
-                                <h2>Boulanger-pâtissier</h2>
-                                </div>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <img src="./images/entreprise.png" alt="skill">
-                                    <p>La Royale</p>
-                                </div>
-                                <div class="skill-item">
-                                    <img src="./images/work.png" alt="skill">
-                                    <p>Stage</p>
-                                </div>
-                                <div class="skill-item">
-                                    <img src="./images/duree.png" alt="skill">
-                                    <p>Décembre 2019</p>
-                                </div>
-                            </div>
-                            <p style="margin-left: 20px; margin-top: -0.5rem;">Qualités</p>
-                            <div class="projet-skills">
-                                <div class="skill-item">
-                                    <p>Autonome</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Rigoureux</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Organisé</p>
-                                </div>
-                                <div class="skill-item">
-                                    <p>Travail d'équipe</p>
-                                </div>
-                            </div>
-                            <p style="color: black; margin-left: 20px;">Missions :</p>
-                            <ul style="color: white; margin-top: -1rem;">
-                                <li>Découverte du monde de l’entreprise</li>
-                                <li>Accueil et fidélisation des clients</li>
-                                <li>Maintien du rayon au propre</li>
-                                <li>Gestion de la caisse</li>
-                                <li>Livraison de stocks</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </article>
 
+                    <!-- Boulanger-pâtissier -->
+                    <div class="emploi-item">
+                        <div class="emploi-image">
+                            <img src="./images/pastry.png" alt="La Royale">
+                        </div>
+                        <div class="emploi-infos-scrollable">
+                            <div class="emploi-infos">
+                                <div class="emploi-texte">
+                                    <h2>Boulanger-pâtissier</h2>
+                                    <p>J'ai acquis ma toute première expérience professionnelle lors de mon stage de découverte dans une boulangerie-pâtisserie en forte affluence lors des fêtes de fin d'année.</p>
+                                </div>
+                                <p style="margin-left: 20px; margin-bottom: -0.5px; color: black;">Compétences</p>
+                                <div class="emploi-lieu">
+                                    <div class="emploi-item">
+                                        <img src="./images/entreprise.png" alt="Entreprise">
+                                        <p>La Royale</p>
+                                    </div>
+                                    <div class="emploi-item">
+                                        <img src="./images/work.png" alt="Type de contrat">
+                                        <p>Stage</p>
+                                    </div>
+                                    <div class="emploi-item">
+                                        <img src="./images/duree.png" alt="Période">
+                                        <p>Décembre 2019</p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 40px; margin-left: 20px; margin-bottom: -0.5px; color: black;">Qualités</p>
+                                <div class="emploi-qualites">
+                                    <div class="qualite-item">
+                                        <p>Autonome</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Sérieux</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Organisé</p>
+                                    </div>
+                                    <div class="qualite-item">
+                                        <p>Travail d'équipe</p>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Missions principales :</p>
+                                <ul style="color: white;">
+                                    <li>Découverte du monde de l’entreprise</li>
+                                    <li>Accueil et fidélisation des clients</li>
+                                    <li>Vente des produits</li>
+                                    <li>Livraison de stocks</li>
+                                    <li>Maintien du rayon au propre</li>
+                                </ul>
+                                <p style="margin-top: 40px; margin-bottom: -1rem; margin-left: 20px; color: black;">Résultats :</p>
+                                <ul style="color: white;">
+                                    <li>Adaptation rapide dans une équipe en environnement dynamique</li>
+                                    <li>Gestion de caisses dynamique et fluide</li>
+                                    <li>Respect strict des règles d'hygiène</li>
+                                    <li>Contribution à la satisfaction client avec des retours positifs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                </article>
+            </div>
+
+            <!-- Bloc pour mon CV consultable et téléchargeable -->
+            <h2 style="text-align: center; color: #007bff;">Mon CV est disponible de deux manières</h1>
             <div id="embauche">
-                <a href="CV_ABOUDOU_Ben-Ali.pdf" class="cv" download="CV_Stage_ABOUDOU_Ben-Ali">
-                    <img src="./images/pdf.png" alt="download-cv">
-                    <p class="cv-button">Télécharger le CV</p>
+                <a href="CV_ABOUDOU_Ben-Ali.pdf" class="cv" download="CV_ABOUDOU_Ben-Ali">
+                    <img src="./images/pdf.png" alt="download-cv" />
+                    <p class="cv-bouton">Télécharger mon CV</p>
                 </a>
-                <a class="cv" href="CV_ABOUDOU_Ben-Ali.pdf" >
-                    <img src="./images/pdf.png" alt="watch-cv">
-                    <p class="cv-button">Regarder mon CV</p>
+                <a href="CV_ABOUDOU_Ben-Ali.pdf" class="cv">
+                    <img src="./images/pdf.png" alt="watch-cv" />
+                    <p class="cv-bouton">Consulter mon CV</p>
                 </a>
             </div>
 
+            <!-- Mise en place du formulaire pour le contact -->
             <section id="destination-formulaire">
                 <form action="https://api.web3forms.com/submit" method="post">
-                    <legend>Contactez-nous</legend>
+                    <legend>Contactez-moi</legend>
+
                     <input type="hidden" name="access_key" value="a38e143d-7397-4d7b-8638-f1ff4ea7f401">
                     <input type="hidden" name="from_name" value="Portfolio Ben-Ali">
                     <input type="hidden" name="redirect" value="https://api.web3forms.com/submit/success">
-                    <input type="text" id="last-name" name="nom" placeholder="Votre nom" required/>
-                    <input type="text" id="first-name" name="prenom" placeholder="Votre prénom" required/>
-                    <input type="email" id="mail" name="email" placeholder="Votre adresse-mail" required/>
-                    <textarea id="message" name="avis" rows="6" placeholder="Votre message" required></textarea>
-                    <input type="submit" id="envoyer" name="validation" value="Envoyer"/>
+
+                    <input type="text" name="last-name" id="nom" placeholder="Votre nom" required>
+                    <input type="text" name="first-name" id="prenom" placeholder="Votre prénom" required>
+                    <input type="email" name="email" id="mail" placeholder="Votre adresse-mail" required>
+                    <input type="tel" name="number-phone id="numero-telephone" placeholder="Votre numéro de téléphone" required>
+                    <textarea name="avis" id="message" rows="6" placeholder="Votre message"></textarea>
+
+                    <input type="submit" id="envoyer" name="validation" value="Envoyer">
                 </form>
             </section>
-            
         </main>
+
+        <!-- Le footer de mon portfolio -->
         <footer>
             <div class="droits-auteur">
                 <p>© 2026 Ben-Ali ABOUDOU. Tous droits réservés.</p>
@@ -686,17 +735,23 @@
             </div>
             <div class="contact-icons">
                 <a href="mailto:aboudoubenali@gmail.com"><img src="./images/gmail.png" alt="Gmail"></a>
-                <a href="http://www.linkedin.com/in/ben-ali-aboudou-9a412b269/"><img src="./images/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://github.com/Ben-TECHPlayer"><img src="./images/github.png" alt="GitHub"></a>
-                <a href="https://youtube.fr/@Ben_CR7"> <img src="./images/youtube.png" alt="Youtube"></a> 
+                <a href="https://www.linkedin.com/in/ben-ali-aboudou/"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.github.com/Ben-TECHPlayer/"><img src="./images/github.png" alt="GitHub"></a>
+                <a href="https://www.youtube.com/@Ben_CR7"><img src="./images/youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/ben_vivatech26"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/@ben.gamings.tc"><img src="./images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.x.com/Ben93_TC"><img src="./images/twitter.png" alt="Twitter"></a>
             </div>
         </footer>
+
     </body>
+
+    <!-- Gérer le comportement du menu hamburger -->
     <script>
-        const toggleBtn = document.querySelector('.menu-toggle');
+        const toggleBouton = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
 
-        toggleBtn.addEventListener('click', () => {
+        toggleBouton.addEventListener('click', () => {
             menu.classList.toggle('show');
         });
     </script>

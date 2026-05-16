@@ -1,9 +1,4 @@
-section form legend{
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
+/* Personnalisation de mon formulaire */
 section form{
     margin: 0 auto;
     padding: 25px;
@@ -16,11 +11,19 @@ section form{
     overflow-x: auto;
 }
 
+/* Customiation du titre de mon formulaire */
+section form legend{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Personnalisation de mes inputs et mon champ de texte */
 section form input, section form textarea{
     display: block;
-    width: auto; 
+    width: auto;
     min-width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     padding: 10px;
     margin: 0 0 20px 0;
     border-radius: 5px;
@@ -28,7 +31,8 @@ section form input, section form textarea{
     box-sizing: border-box;
 }
 
-section form input[type=submit] {
+/* Personnalisation de mon input de validation */
+section form input[type=submit]{
     background: none;
     background-color: white;
     color: #007bff;
@@ -36,9 +40,9 @@ section form input[type=submit] {
     text-align: center;
 }
 
-section form input[type=submit]:hover {
+/* Personnalisation de mon input de validation au survol */
+section form input[type=submit]:hover{
     background-color: #007bff;
     color: white;
-    transition: ease-in 0.3s;
+    transition: ease-in 0.2s;
 }
-

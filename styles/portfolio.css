@@ -1,6 +1,24 @@
-html {
-    scroll-behavior: smooth;
-    font-family: "Samsung Sharp Sans", "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+html{
+    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    scroll-behavior: smooth; /* Permettre le défilement de la page web */
+}
+
+body{
+    /* Personnalisation de mon identité visuelle pour mon portfolio */
+    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: snow;
+
+    /* Mise en forme de mon portfolio */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+/* Continuité de la mise en forme de mon portfolio */
+main{
+    flex-grow: 1;
 }
 
 @media (min-width: 1150px) {
@@ -10,195 +28,155 @@ html {
     }
 
     footer{
-        padding: 0rem 2rem 0 2rem;
+        padding: 0 2rem 0 2rem;
     }
 }
 
-body{
-    font-family: "Samsung Sharp Sans", "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: snow;
+/* HEADER */
+
+/* Mettre le titre en bleu */
+header .header-container h1 a{
+    text-decoration: none;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Mise en page de mon header en flex */
+header .header-container{
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0px;
-    padding: 0px 10px;
-}
-
-main{
-    flex-grow:1;
-}
-
-#web-dev .projet-piece, #web-design .projet-piece, #mobile .projet-piece, #panel-emplois .projet-piece{
-    border: 1px solid black;
-    background-color: #007bff;
-}
-
-#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container, #panel-emplois .projet-piece .projet-infos-container-scroll .projet-infos-container{
-    overflow-x: auto;
-}
-
-#web-dev .projet-piece .projet-image img, #web-design .projet-piece .projet-image img, #mobile .projet-piece .projet-image img, #panel-emplois .projet-piece .projet-image img{
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid black;
-}
-
-#web-dev .projet-piece .projet-image, #web-design .projet-piece .projet-image, #mobile .projet-piece .projet-image, #panel-emplois .projet-piece .projet-image { 
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-radius: 10px;
-}
-
-#web-dev .projet-piece .projet-text, #web-design .projet-piece .projet-text, #mobile .projet-piece .projet-text, #panel-emplois .projet-piece .projet-text{
-    display: flex;
-    flex-direction: column;
-    box-shadow: none;
-    padding: 20px;
-    color: white;
-}
-
-#web-dev .projet-piece .projet-skills, #web-design .projet-piece .projet-skills, #mobile .projet-piece .projet-skills, #panel-emplois, .projet-piece .projet-skills{
-    display: grid;
-    grid-template-columns: repeat(3,2fr);
-    margin: 0 20px 20px;
-    gap: 15px;
-}
-
-#web-dev .projet-piece .skill-item, #web-design .projet-piece .skill-item, #mobile .projet-piece .skill-item, #panel-emplois .projet-piece .skill-item{
-    display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 0 10px 0 10px;
-    gap: 15px;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
-#web-dev .projet-piece .skill-item img, #web-design .projet-piece .skill-item img, #mobile .projet-piece .skill-item img, #panel-emplois .projet-piece .skill-item img{
-    width: 30px;
-    height: auto;
+/* Mise en page de mon menu en flex */
+header .header-container .menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
-#web-dev .projet-piece .skill-item p, #web-design .projet-piece .skill-item p, #mobile .projet-piece .skill-item p, #panel-emplois .projet-piece .skill-item p{
-    color: white;
+header .header-container .menu a{
+    text-decoration: none;
+    color: black;
     font-weight: 500;
 }
 
-#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a{
-    color: white;
-    text-decoration: none;
-}
-
-#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a:hover{
-    text-decoration: underline;
-}
-
-#web-dev .projet-piece .projet-infos-container-scroll .projet-infos-container a::after, #web-design .projet-piece .projet-infos-container-scroll .projet-infos-container a::after, #mobile .projet-piece .projet-infos-container-scroll .projet-infos-container a::after{
-    color: white;
-}
-
-header h1 a{
-    text-decoration: none;
+/* Mettre en bleu au survol avec l'animation */
+header .header-container .menu a:hover{
     color: #007bff;
-    text-align: center;
+    transition: ease-in 0.2s;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
-}
-
-.menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.menu a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.menu a:hover{
+/* Mettre le bouton Contact en bleu avec une bordure bleu sans arrière-plan */
+header .header-container .menu a.bouton-contact{
+    background: none;
     color: #007bff;
-    transition: ease-in 0.3s;
+    padding: 0.5rem 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
 }
 
-.menu a.btn-contact {
-  background: none;
-  color: #007bff;
-  padding: 0.5rem 1rem;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-}
-
-.menu a.btn-contact:hover {
+/* Mettre le bouton Contact en blanc et l'arrière-plan en bleu */
+header .header-container .menu a.bouton-contact:hover{
     background-color: #007bff;
     color: white;
-    transition: ease-in 0.3s;
+    transition: ease-in 0.2s;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Configurer le menu */
+header .header-container .menu-toggle{
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
+/* Design responsive pour ceux qui utilisent leur smartphone */
 @media (max-width: 768px) {
-  .menu {
-    max-height: 0;  
-    overflow: hidden;  
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 1rem;
-    opacity: 0; 
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }
+    /* Mettre en place le menu hamburger */
+    header .header-container .menu{
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: flex-end; /* Mettre le menu hamburger en haut à droite */
+        width: 100%;
+        margin-top: 1rem;
+        opacity: 0;
+        /* Animation pour ouvrir ou fermer le menu hamburger */
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    }
 
-  .menu.show {
-    max-height: 500px; 
-    opacity: 1;
-  }
+    /* Si on appuie sur le bouton du menu, afficher les rubriques */
+    /* A voir sur JavaScript ou le script en html aussi dès maintenant */
+    header .header-container .menu.show{
+        max-height: 500px;
+        opacity: 1;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    header .header-container .menu-toggle{
+        display: block;
+    }
 }
 
 
-#profile-container{
+/* MAIN */
+
+/* Mettre en valeur mon profil */
+main #profile-container .about-me h1, main #profile-container .about-me h2, main #profile-container .about-me p{
     text-align: center;
-    width: 100%;
 }
 
+main #profile-container .about-me h1, main #profile-container .about-me h2{
+    font-weight: 500;
+}
+
+main #profile-container .about-me h1{
+    font-size: 3rem;
+}
+
+main #profile-container .about-me h2{
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+main #profile-container .about-me p{
+    font-size: 20px;
+}
+
+/* Laisser de l'espace pour la mise en page */
 main h1{
     margin-top: 2rem;
 }
 
-#panel-formations {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
+/* PANEL DES FORMATIONS */
+
+/* Enlever les choses parasites */
+main .panel-formations-scrollable #panel-formations .formation-item .liste-certifications li a{
+    text-decoration: none;
+}
+
+main .panel-formations-scrollable #panel-formations .formation-item .liste-certifications li a:hover{
+    color: white;
+    transition: ease-in 0.2s;
+}
+
+/* Activer le défilement automatique pour faciliter la lecture de nos formations */
+main .panel-formations-scrollable #panel-formations{
+    overflow-x: auto;
+}
+
+/* Laisser de l'espace entre les blocs de formations */
+main .panel-formations-scrollable #panel-formations{
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-.panel-formations-scroll #panel-formations {
-    overflow-x: auto;
-}
-
-#panel-formations .formation-item{
+/* Mettre chaque formation en forme */
+main .panel-formations-scrollable #panel-formations .formation-item{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -209,104 +187,134 @@ main h1{
     padding: 10px;
     background-color: #007bff;
     color: white;
-    /* overflow-x: auto; */
 }
 
-#panel-formations .formation-item h2, #panel-formations .formation-item p {
+main .panel-formations-scrollable #panel-formations .formation-item h2, main .panel-formations-scrollable #panel-formations .formation-item p{
     margin: 10px 0 0 10px;
 }
 
-#panel-formations .formation-title {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  margin-bottom: 1rem;
+/* Mettre le header de chaque bloc de formation en forme */
+main .panel-formations-scrollable #panel-formations .formation-item .formation-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-#panel-formations .formation-title h2 {
-  flex: 1 1 auto; 
+main .panel-formations-scrollable #panel-formations .formation-item .formation-title h2{
+    flex: 1 1 auto;
 }
 
-#panel-formations .formation-title img {
-  flex: 0 0 auto;
-  width: 15%;
-  height: auto;
-  padding: 10px
+/* Customiser l'image */
+main .panel-formations-scrollable #panel-formations .formation-item .formation-title img{
+    flex: 0 0 auto;
+    width: 70px;
+    height: auto;
+    padding: 10px;
 }
 
-@media (max-width: 768px) {
-    #panel-formations .formation-title {
+/* Mettre en forme le header pour ceux qui utilisent leur smartphone(Design responsive) */
+@media (max-width: 620px) {
+    main .panel-formations-scrollable #panel-formations .formation-item .formation-title{
         flex-direction: column;
         align-items: flex-start;
     }
 
-    #panel-formations .formation-title img {
-        width: 50%;
+    main .panel-formations-scrollable #panel-formations .formation-item .formation-title img{
+        width: 200px;
     }
 }
 
-
-
-.filtres{
+/* UTILITAIRES : Système de filtres */
+#filtres.skills, #filtres.projets{
     display: flex;
     justify-content: center;
     gap: 10px;
     align-items: center;
 }
 
-@media(max-width: 500px){
-    .filtres{
+/* Customiser les boutons */
+#filtres.skills button, #filtres.projets button{
+    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    background: none;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* Customiser le texte des boutons */
+#filtres.skills button a, #filtres.projets button a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: inherit; /* faciliter la lecture au niveau des couleurs */
+}
+
+#filtres.skills button:hover, #filtres.projets button:hover{
+    color: #007bff;
+    transition: ease-in 0.2s;
+}
+
+@media (max-width: 300px) {
+    #filtres.skills ul{
         flex-direction: column;
-        gap: 0px;
     }
 }
 
-.filtres button{
-    padding: 15px;
-    border-radius: 12px;
-    border: none;
-    background: none;
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+@media (max-width: 600px) {
+    #filtres.projets ul{
+        flex-direction: column;
+    }
 }
 
-.filtres button a {
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none; 
-    color: inherit;
+/* PANEL DES COMPETENCES ET QUALITÉS */
+
+/* Activer le défilement automatique pour faciliter la lecture de nos compétences et qualités */
+main .hardskills-scrollable #hardskills, main .softskills-scrollable #softskills{
+    overflow-x: auto;
 }
 
-.filtres button:hover {
-    color: #007bff;
-    transition: ease-in 0.3s;
-}
-
-article div p{
-    font-weight: 600;
-}
-
-#hardskills li, #softskills li{
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-#hardskills li img, #softskills li img{
+/* Customiser la taille des images */
+main .hardskills-scrollable #hardskills div img{
     width: 30px;
     height: auto;
 }
 
-#hardskills ul, #softskills ul{
-    margin-top: -0.5rem;
-}
-
-#hardskills ul{
+/* Enlever les points inutiles */
+main .hardskills-scrollable #hardskills ul{
     list-style: none;
 }
 
-#hardskills div, #softskills div {
+/* Mettre en forme */
+main .hardskills-scrollable #hardskills ul, main .softskills-scrollable #softskills ul{
+    margin-top: -0.5rem;
+}
+
+/* Personnaliser la liste des compétences et qualités */
+main .hardskills-scrollable #hardskills li, main .softskills-scrollable #softskills li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+/* Customiser la taille des images */
+main .hardskills-scrollable #hardskills li img, main .softskills-scrollable #softskills li img{
+    width: 30px;
+    height: auto;
+}
+
+/* Mettre en forme les blocs en flex */
+main .hardskills-scrollable #hardskills, main .softskills-scrollable #softskills{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+/* Customiser les blocs de compétences et qualités */
+main .hardskills-scrollable #hardskills div, main .softskills-scrollable #softskills div{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -318,191 +326,258 @@ article div p{
     box-shadow: 0 0 10px black;
     background-color: #007bff;
     color: white;
-    /* overflow-x: auto; */
 }
 
-#hardskills {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-#softskills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-@media (max-width: 500px){
-    #hardskills, #softskills {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-    }
-}
-
-@media (max-width: 300px){
-    .filtres ul{
-        flex-direction: column;
-    }
-}
-
-#web-design, #mobile {
+/* Utilitaire pour les filtres */
+main #web-design, main #app-dev{
     display: none;
 }
 
-#web-dev, #web-design, #mobile {
-    /* display: grid; */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    overflow-x: auto;
-}
+/* PROJETS */
 
-/* @media (max-width: 675px) {
-    #web-dev, #web-design, #mobile{
-        grid-template-columns: repeat(1, 1fr);
-    }
-} */
-
-.hardskills-scroll #hardskills, .softskills-scroll #softskills{
-    overflow-x: auto;
-}
-
-#web-dev .projet-item li, #web-design .projet-item li, #mobile .projet-item li{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-#web-dev .projet-item ul, #web-design .projet-item ul, #mobile .projet-item ul{
-    margin-top: -1rem;
-}
-
-#web-dev .projet-item, #web-design .projet-item, #mobile .projet-item {
-    position: relative; /* Permet de positionner l'image par rapport à ce conteneur */
+/* Activer le défilement */
+main #web-dev, main #web-design, main #app-dev{
     display: flex;
-    flex-direction: column; /* Organise le contenu de chaque bloc en colonne */
-    justify-content: flex-start; /* Aligner le contenu en haut */
-    align-items: flex-start; /* Aligner le texte à gauche dans chaque bloc */
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 3rem;
+}
+
+/* Mise en forme des blocs en flex et mettre l'arrière-plan des blocs en bleu */
+main #web-dev .projet-item, main #web-design .projet-item, main #app-dev .projet-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;box-shadow: 0 0 10px black;
+    /* padding: 20px; */
+    box-shadow: 0 0 10px black;
     background-color: #007bff;
     color: white;
+    border: 1px solid black;
 }
 
-#web-dev .projet-item img, #web-design .projet-item img, #mobile .projet-item img {
-    width: 100%;
+/* Mettre en forme le header de chaque bloc en flex */
+main #web-dev .projet-item .projet-image, main #web-design .projet-item .projet-image, main #app-dev .projet-item .projet-image {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences, main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-competences, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-qualites, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    margin: 0 10px 20px 0;
+    gap: 15px;
+    padding: 20px;
+}
+
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item, main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 0 10px 0 10px;
+}
+
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item img, main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item img, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item img, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item img, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item img, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item img{
+    width: 30px;
     height: auto;
 }
 
-.projet-item p{
-    font-size: 1.2rem;
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item p, main #web-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item p, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item p, main #web-design .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item p, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-competences .competence-item p, main #app-dev .projet-item .projet-infos-scrollable .projet-infos .projet-qualites .qualite-item p{
     font-weight: 500;
+    color: white;
 }
 
-.projet-item p strong{
-    color: black;
-    font-weight: 800;
-}
-
-#panel-emplois {
-    display: flex;
-    flex-direction: row; /* 3 colonnes égales */
-    gap: 20px; /* Espace entre les colonnes */
-    margin: -1px;
-    overflow-x: auto;
-}
-
-#panel-emplois .emplois-item p, #panel-emplois .emplois-item ul li{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-#web-dev .projet-item p a, #web-design .projet-item p a, #mobile .projet-item p a{
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos a, main #web-design .projet-item .projet-infos-scrollable .projet-infos a, main #app-dev .projet-item .projet-infos-scrollable .projet-infos a{
     text-decoration: none;
     color: white;
 }
 
-#web-dev .projet-item .lien-projet, #web-design .projet-item .lien-projet, #mobile .projet-item .lien-projet{
-    color: black;
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos a:hover, main #web-design .projet-item .projet-infos-scrollable .projet-infos a:hover, main #app-dev .projet-item .projet-infos-scrollable .projet-infos a:hover{
+    text-decoration: underline;
 }
 
-#panel-emplois .emplois-item p strong{
-    color: black;
+main #web-dev .projet-item .projet-infos-scrollable .projet-infos a::after, main #web-design .projet-item .projet-infos-scrollable .projet-infos a::after, main #app-dev .projet-item .projet-infos-scrollable .projet-infos a::after{
+    color: white;
+}
+
+/* Customiser la taille des images */
+main #web-dev .projet-item .projet-image img, main #web-design .projet-item .projet-image img, main #app-dev .projet-item .projet-image img{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+
+/* Personnalisation des textes */
+main #web-dev .projet-item .projet-texte, main #web-design .projet-item .projet-texte, main #app-dev .projet-item .projet-texte{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    color: white;
+    padding: 20px;
+}
+
+main #web-dev .projet-item p strong, main #web-design .projet-item p strong, main #app-dev .projet-item p strong{
+    color: white;
     font-weight: 800;
 }
 
-@media (max-width: 1300px) {
-    #panel-emplois {
-        grid-template-columns: repeat(2, 1fr);
-    }
+main #web-dev .projet-item p a, main #web-design .projet-item p a, main #app-dev .projet-item p a{
+    text-decoration: none;
+    color: white;
 }
 
-@media (max-width: 850px) {
-    #panel-emplois {
-        grid-template-columns: repeat(1, 1fr);
-    }
+main #web-dev .projet-item .lien-projet, main #web-design .projet-item .lien-projet, main #app-dev .projet-item .lien-projet{
+    color: black;
 }
 
-@media (max-width: 350px){
-    .filtres ul{
-        flex-direction: column;
-    }
+main #web-dev .projet-item ul, main #web-design .projet-item ul, main #app-dev .projet-item ul{
+    font-weight: 500;
 }
 
-.cv {
-  display: inline-block;
-  width: 150px;
-  margin: 10px;
-  text-align: center;
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.cv img {
-  width: 10%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.cv .cv-button {
-  margin-top: 8px;
-  font-weight: 500;
-  font-size: 16px;
-  color: blue;
-}
-
-#embauche {
+/* EMPLOIS */
+main .panel-emplois-scrollable #panel-emplois{
     display: flex;
-    justify-content: space-around; 
+    flex-direction: row;
+    gap: 3rem;
+    margin: -1px;
+    overflow-x: auto;
+}
+
+main .panel-emplois-scrollable #panel-emplois p strong{
+    color: black;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* padding: 20px; */
+    box-shadow: 0 0 10px black;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Mettre en forme le header de chaque bloc en flex */
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-image {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-lieu, main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-qualites{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    margin: 0 10px 20px 0;
+    gap: 15px;
+    padding: 20px;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-lieu .emploi-item, main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-qualites .qualite-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 0 10px 0 10px;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-lieu .emploi-item img, main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-qualites .qualite-item img{
+    width: 30px;
+    height: auto;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-lieu .emploi-item p, main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos .emploi-qualites .qualite-item p{
+    font-weight: 500;
+    color: white;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos a{
+    text-decoration: none;
+    color: white;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos a:hover{
+    text-decoration: underline;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-infos-scrollable .emploi-infos a::after{
+    color: white;
+}
+
+/* Customiser la taille des images */
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-image img{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+
+/* Personnalisation des textes */
+main .panel-emplois-scrollable #panel-emplois .emploi-item .emploi-texte{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    color: white;
+    padding: 20px;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item p strong{
+    color: white;
+    font-weight: 800;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item p a{
+    text-decoration: none;
+    color: white;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item ul{
+    font-weight: 500;
+}
+
+/* Bloc Embauche */
+
+/* Mise en page du bloc embauche via le flexbox */
+#embauche{
+    display: flex;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 20px 0;
     gap: 20px;
 }
 
-@media (max-width: 670px){
+/* Responsive design destiné à ceux qui utilisent leur smartphone */
+@media (max-width: 670px) {
     #embauche{
         flex-direction: column;
     }
 }
 
-#embauche .cv {
+/* Personnalisation du bloc embauche */
+#embauche .cv{
     flex: 1;
-    width: 80vw; 
-}
-
-button .cv-button{
-    background: none;
-    border: 1px solid red;
-}
-
-a.cv{
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;  /* Retire le soulignement des liens */
-    color: red;
-    border: 1px solid red;
+    width: 80vw;
 }
 
 #embauche .cv p{
@@ -514,29 +589,59 @@ a.cv{
     margin: 0 auto;
 }
 
-#embauche .ux-design a{
-    font-weight: 600;
-}
-
 #embauche .cv a:hover{
     color: magenta;
 }
 
-footer {
+/* Personnaliation des boutons */
+button .cv-bouton{
+    background: none;
+    border: 1px solid red;
+}
+
+a.cv{
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+}
+
+.cv{
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Customiser la taille de l'image */
+.cv img{
+    width: 10%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+
+/* Mise en forme de mon footer */
+footer{
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
     background-color: #007bff;
     color: white;
 }
 
-@media(max-width: 595px){
-    footer {
+/* Design responsive pour ceux qui utilisent leur smartphone */
+@media (max-width: 765px) {
+    footer{
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -544,15 +649,17 @@ footer .droits-auteur{
     text-align: center;
 }
 
-.contact-icons {
-    float: right;
+/* Mettre ce bloc en bas à droite */
+footer .contact-icons{
+    float: right; /* Mettre les icônes en bas à droite */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     gap: 20px;
 }
 
-.contact-icons img {
-    width: 30px; 
+/* Définir la taille des icônes */
+footer .contact-icons img{
+    width: 30px;
     height: auto;
 }
