@@ -158,7 +158,7 @@ main .panel-formations-scrollable #panel-formations .formation-item .liste-certi
     text-decoration: none;
 }
 
-ain .panel-formations-scrollable #panel-formations .formation-item .liste-certifications ul a:hover, main .panel-formations-scrollable #panel-formations .formation-item .liste-certifications li a:hover{
+main .panel-formations-scrollable #panel-formations .formation-item .liste-certifications ul a:hover, main .panel-formations-scrollable #panel-formations .formation-item .liste-certifications li a:hover{
     color: white;
     transition: ease-in-out 0.2s;
 }
