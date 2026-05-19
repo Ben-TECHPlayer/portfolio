@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link href="https://fonts.cdnfonts.com/css/samsungone" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/portfolio.css">
-        <link rel="stylesheet" href="./styles/contact.css">
+        <!-- On devait mettre l'attribut type="text/css" dans ces trois links ci-dessous -->
+        <link type="text/css" href="https://fonts.cdnfonts.com/css/samsungone" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./styles/portfolio.css"> 
+        <link rel="stylesheet" type="text/css" href="./styles/contact.css">
         <script src="./scripts/script.js" defer></script>
     </head>
     <body onload="showSection('hardskills'), showSection('web-dev')">
@@ -73,9 +74,12 @@
             <h1 id="destination-competences">Compétences</h1>
 
             <!-- Système de filtres -->
-            <nav id="filtres" class="skills">
-                <button id="bouton-hardskills"><a href="#destination-competences" onclick="showSection('hardskills')">Hard Skills</a></button>
-                <button id="bouton-softskills"><a href="#destination-competences" onclick="showSection('softskills')">Soft Skills</a></button>
+            <nav class="filtres-skills">
+                <!-- Dans ces boutons, on a utilisé la balise button, 
+                 mais dans cette situation dans le validateur HTML, ce n'est pas permis car c'est une erreur
+                 donc il faut préconisé la balise a comme nos boutons comportent des liens -->
+                <a id="bouton-hardskills" href="#destination-competences" onclick="showSection('hardskills')">Hard Skills</a>
+                <a id="bouton-softskills" href="#destination-competences" onclick="showSection('softskills')">Soft Skills</a>
             </nav>
 
             <div class="hardskills-scrollable">
@@ -150,10 +154,16 @@
             <h1 id="destination-projets">Projets</h1>
 
             <!-- Système de filtres -->
-            <nav id="filtres" class="projets">
-                <button id="bouton-webdev"><a href="#destination-projets" onclick="showSection('web-dev')">Développement web</a></button>
-                <button id="bouton-webdesign"><a href="#destination-projets" onclick="showSection('web-design')">Design web</a></button>
-                <button id="bouton-appdev"><a href="#destination-projets" onclick="showSection('app-dev')">Développement mobile</a></button>
+            <nav class="filtres-projets">
+                <!-- Dans ces boutons, on a utilisé la balise button, 
+                 mais dans cette situation dans le validateur HTML, ce n'est pas permis car c'est une erreur
+                 donc il faut préconisé la balise a comme nos boutons comportent des liens -->
+
+                 <!-- D'ailleurs on a utilisé l'ID filtres deux fois donc ça a détécté une erreur, 
+                  pour cela on a fait une classe pour chaque système de filtres -->
+                <a id="bouton-webdev" href="#destination-projets" onclick="showSection('web-dev')">Développement web</a>
+                <a id="bouton-webdesign" href="#destination-projets" onclick="showSection('web-design')">Design web</a>
+                <a id="bouton-appdev" href="#destination-projets" onclick="showSection('app-dev')">Développement mobile</a>
             </nav>
 
             <!-- Bloc de mes projets en développement web full-stack -->
@@ -695,7 +705,7 @@
             </div>
 
             <!-- Bloc pour mon CV consultable et téléchargeable -->
-            <h2 style="text-align: center; color: #007bff;">Mon CV est disponible de deux manières</h1>
+            <h2 style="text-align: center; color: #007bff;">Mon CV est disponible de deux manières</h2>
             <div id="embauche">
                 <a href="CV_ABOUDOU_Ben-Ali.pdf" class="cv" download="CV_ABOUDOU_Ben-Ali">
                     <img src="./images/pdf.png" alt="download-cv" />
@@ -708,9 +718,11 @@
             </div>
 
             <!-- Mise en place du formulaire pour le contact -->
-            <section id="destination-formulaire">
+            <!-- On avait utilisé la balise section mais il fallait préconiser la balise div, car le validateur a détécté une erreur dans section -->
+            <div id="destination-formulaire"> 
                 <form action="https://api.web3forms.com/submit" method="post">
-                    <legend>Contactez-moi</legend>
+                    <!-- On avait mis legend au lieu de fieldset, donc c'était une erreur -->
+                    <fieldset>Contactez-moi</fieldset>
 
                     <input type="hidden" name="access_key" value="a38e143d-7397-4d7b-8638-f1ff4ea7f401">
                     <input type="hidden" name="from_name" value="Portfolio Ben-Ali">
@@ -719,12 +731,12 @@
                     <input type="text" name="last-name" id="nom" placeholder="Votre nom" required>
                     <input type="text" name="first-name" id="prenom" placeholder="Votre prénom" required>
                     <input type="email" name="email" id="mail" placeholder="Votre adresse-mail" required>
-                    <input type="tel" name="number-phone id="numero-telephone" placeholder="Votre numéro de téléphone" required>
+                    <input type="tel" name="number-phone" id="numero-telephone" placeholder="Votre numéro de téléphone" required>
                     <textarea name="avis" id="message" rows="6" placeholder="Votre message"></textarea>
 
                     <input type="submit" id="envoyer" name="validation" value="Envoyer">
                 </form>
-            </section>
+            </div>
         </main>
 
         <!-- Le footer de mon portfolio -->

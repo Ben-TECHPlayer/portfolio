@@ -230,7 +230,7 @@ main .panel-formations-scrollable #panel-formations .formation-item .formation-t
 }
 
 /* UTILITAIRES : Système de filtres */
-#filtres.skills, #filtres.projets{
+.filtres-skills, .filtres-projets{
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -238,35 +238,31 @@ main .panel-formations-scrollable #panel-formations .formation-item .formation-t
 }
 
 /* Customiser les boutons */
-#filtres.skills button, #filtres.projets button{
+.filtres-skills a, .filtres-projets a{
     font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     background: none;
     border: none;
     border-radius: 12px;
     padding: 15px;
-}
-
-/* Customiser le texte des boutons */
-#filtres.skills button a, #filtres.projets button a{
+    font-size: 18px;
     text-decoration: none;
     font-weight: 500;
-    font-size: 18px;
-    color: inherit; /* faciliter la lecture au niveau des couleurs */
+    color: inherit;
 }
 
-#filtres.skills button:hover, #filtres.projets button:hover{
+.filtres-skills a:hover, .filtres-projets a:hover{
     color: #007bff;
     transition: ease-in 0.2s;
 }
 
 @media (max-width: 300px) {
-    #filtres.skills ul{
+    .filtres-skills{
         flex-direction: column;
     }
 }
 
 @media (max-width: 600px) {
-    #filtres.projets ul{
+    .filtres-projets{
         flex-direction: column;
     }
 }
@@ -591,6 +587,7 @@ main .panel-emplois-scrollable #panel-emplois .emploi-item ul{
     display: block;
     width: fit-content;
     margin: 0 auto;
+    border: none;
 }
 
 #embauche .cv a:hover{
@@ -598,7 +595,7 @@ main .panel-emplois-scrollable #panel-emplois .emploi-item ul{
 }
 
 /* Personnaliation des boutons */
-button .cv-bouton{
+.cv-bouton{
     background: none;
     border: 1px solid red;
 }
