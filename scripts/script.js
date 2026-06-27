@@ -15,19 +15,19 @@ function showSection(sectionId){
 
     // Utiliser ces variables pour le système de filtres de compétences et qualités
     if(sectionId === 'hardskills'){
-        hard.style.display = 'flex';
+        hard.style.display = 'grid';
         soft.style.display = 'none';
         hardButton.style.color = '#007bff';
         softButton.style.color = '';
     } else if(sectionId === 'softskills'){
         hard.style.display = 'none';
-        soft.style.display = 'flex';
+        soft.style.display = 'grid';
         hardButton.style.color = '';
         softButton.style.color = '#007bff';
     }
     // Utiliser les variables pour le système de filtres de projets informatiques
     else if(sectionId === 'web-dev'){
-        webdev.style.display = 'flex';
+        webdev.style.display = 'grid';
         webdesign.style.display = 'none';
         appdev.style.display = 'none';
         webdevButton.style.color = '#007bff';
@@ -35,7 +35,7 @@ function showSection(sectionId){
         appdevButton.style.color = '';
     } else if(sectionId === 'web-design'){
         webdev.style.display = 'none';
-        webdesign.style.display = 'flex';
+        webdesign.style.display = 'grid';
         appdev.style.display = 'none';
         webdevButton.style.color = '';
         webdesignButton.style.color = '#007bff';
@@ -43,7 +43,7 @@ function showSection(sectionId){
     } else if(sectionId === 'app-dev'){
         webdev.style.display = 'none';
         webdesign.style.display = 'none';
-        appdev.style.display = 'flex';
+        appdev.style.display = 'grid';
         webdevButton.style.color = '';
         webdesignButton.style.color = '';
         appdevButton.style.color = '#007bff';

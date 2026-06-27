@@ -174,8 +174,8 @@ main .panel-formations-scrollable #panel-formations{
 
 /* Laisser de l'espace entre les blocs de formations */
 main .panel-formations-scrollable #panel-formations{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 30px;
 }
 
@@ -307,10 +307,16 @@ main .hardskills-scrollable #hardskills li img, main .softskills-scrollable #sof
 
 /* Mettre en forme les blocs en flex */
 main .hardskills-scrollable #hardskills, main .softskills-scrollable #softskills{
-    display: flex;
-    flex-direction: row;
+    display: grid;
     gap: 30px;
-    justify-content: space-evenly;
+}
+
+main .hardskills-scrollable #hardskills{
+    grid-template-columns: repeat(4,1fr);
+}
+
+main .softskills-scrollable #softskills{
+    grid-template-columns: repeat(3,1fr);
 }
 
 /* Customiser les blocs de compétences et qualités */
@@ -337,10 +343,17 @@ main #web-design, main #app-dev{
 
 /* Activer le défilement */
 main #web-dev, main #web-design, main #app-dev{
-    display: flex;
-    flex-direction: row;
+    display: grid;
     overflow-x: auto;
     gap: 3rem;
+}
+
+main #web-dev, main #web-design{
+    grid-template-columns: repeat(2,1fr);
+}
+
+main #app-dev{
+    grid-template-columns: repeat(3,1fr);
 }
 
 /* Mise en forme des blocs en flex et mettre l'arrière-plan des blocs en bleu */
@@ -447,8 +460,8 @@ main #web-dev .projet-item ul, main #web-design .projet-item ul, main #app-dev .
 
 /* EMPLOIS */
 main .panel-emplois-scrollable #panel-emplois{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 3rem;
     margin: -1px;
     overflow-x: auto;
