@@ -1,11 +1,12 @@
 html{
-    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Outfit", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     scroll-behavior: smooth; /* Permettre le défilement de la page web */
 }
 
+
 body{
     /* Personnalisation de mon identité visuelle pour mon portfolio */
-    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Outfit", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     background-color: snow;
 
     /* Mise en forme de mon portfolio */
@@ -139,11 +140,11 @@ main #profile-container .about-me h1{
 
 main #profile-container .about-me h2{
     color: #007bff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 main #profile-container .about-me p{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* Laisser de l'espace pour la mise en page */
@@ -168,16 +169,33 @@ main .panel-formations-scrollable #panel-formations .formation-item .liste-certi
 }
 
 /* Activer le défilement automatique pour faciliter la lecture de nos formations */
-main .panel-formations-scrollable #panel-formations{
+/* main .panel-formations-scrollable #panel-formations{
     overflow-x: auto;
+} */
+ main .panel-formations-scrollable {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    padding: 10px 0;
 }
 
+main .panel-formations-scrollable #panel-formations {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(320px, 380px); /* Largeur fixe de chaque carte */
+    gap: 30px;
+    /* justify-content: space-between; */
+}
+
+
+
 /* Laisser de l'espace entre les blocs de formations */
-main .panel-formations-scrollable #panel-formations{
+/* main .panel-formations-scrollable #panel-formations{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 30px;
-}
+} */
 
 /* Mettre chaque formation en forme */
 main .panel-formations-scrollable #panel-formations .formation-item{
@@ -186,11 +204,43 @@ main .panel-formations-scrollable #panel-formations .formation-item{
     flex-direction: column;
     justify-content: flex-start;
     box-shadow: 0 0 10px black;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: #007bff;
     color: white;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item:hover, main .panel-formations-scrollable #panel-formations .formation-item:hover, main #web-dev .projet-item:hover, main #web-design .projet-item:hover, main #app-dev .projet-item:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+main .panel-formations-scrollable #panel-formations .formation-item .formation-image{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+main .panel-formations-scrollable #panel-formations .formation-item .formation-image img{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+
+main .panel-formations-scrollable #panel-formations .formation-item .formation-infos-scrollable .formation-infos .formation-texte{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    color: white;
+    padding: 20px;
 }
 
 main .panel-formations-scrollable #panel-formations .formation-item h2, main .panel-formations-scrollable #panel-formations .formation-item p{
@@ -229,6 +279,118 @@ main .panel-formations-scrollable #panel-formations .formation-item .formation-t
     }
 }
 
+/* Fenetre modale */
+/* Modale dialog */
+dialog.modale {
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    color: #111827;
+}
+
+dialog.modale::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modale-conteneur {
+    position: relative;
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Bouton fermer */
+.modale-fermer {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.modale-fermer:hover {
+    color: #111827;
+}
+
+/* Typographie et structure interne de la modale */
+#corps-modale-formation h2, #corps-modale-projet h2, #corps-modale-emploi h2 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+#corps-modale-formation .modale-metas, #corps-modale-projet .modale-metas, #corps-modale-emploi .modale-metas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0 1.5rem 0;
+}
+
+#corps-modale-formation .modale-badge, #corps-modale-projet .modale-badge, #corps-modale-emploi .modale-badge {
+    background-color: #eef2ff;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+#corps-modale-formation h4, #corps-modale-projet h4, #corps-modale-emploi h4 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+#corps-modale-formation ul, #corps-modale-projet ul, #corps-modale-emploi ul {
+    margin: 0.5rem 0 1rem 1.2rem;
+    padding: 0;
+    color: #374151;
+}
+
+#corps-modale-formation ul li, #corps-modale-projet ul li, #corps-modale-emploi ul li {
+    margin-bottom: 0.4rem;
+}
+
+/* UTILITAIRES pour le défilement des blocs */
+.bloc-responsive{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 360px) {
+    .bloc-responsive, .header-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.bloc-responsive .boutons-navigation-blocs{
+    display: flex;
+    gap: 1rem;
+}
+
+.bloc-responsive .boutons-navigation-blocs button{
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 /* UTILITAIRES : Système de filtres */
 .filtres-skills, .filtres-projets{
     display: flex;
@@ -239,7 +401,7 @@ main .panel-formations-scrollable #panel-formations .formation-item .formation-t
 
 /* Customiser les boutons */
 .filtres-skills a, .filtres-projets a{
-    font-family: 'Samsung Sharp Sans', "Segoe UI", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Outfit", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     background: none;
     border: none;
     border-radius: 12px;
@@ -270,8 +432,20 @@ main .panel-formations-scrollable #panel-formations .formation-item .formation-t
 /* PANEL DES COMPETENCES ET QUALITÉS */
 
 /* Activer le défilement automatique pour faciliter la lecture de nos compétences et qualités */
-main .hardskills-scrollable #hardskills, main .softskills-scrollable #softskills{
+main .hardskills-scrollable, main .softskills-scrollable{
     overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    padding: 10px 0;
+}
+
+main .hardskills-scrollable #hardskills,
+main .softskills-scrollable #softskills {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(260px, 300px);
+    gap: 30px;
 }
 
 /* Customiser la taille des images */
@@ -311,13 +485,13 @@ main .hardskills-scrollable #hardskills, main .softskills-scrollable #softskills
     gap: 30px;
 }
 
-main .hardskills-scrollable #hardskills{
+/* main .hardskills-scrollable #hardskills{
     grid-template-columns: repeat(4,1fr);
 }
 
 main .softskills-scrollable #softskills{
     grid-template-columns: repeat(3,1fr);
-}
+} */
 
 /* Customiser les blocs de compétences et qualités */
 main .hardskills-scrollable #hardskills div, main .softskills-scrollable #softskills div{
@@ -332,6 +506,13 @@ main .hardskills-scrollable #hardskills div, main .softskills-scrollable #softsk
     box-shadow: 0 0 10px black;
     background-color: #007bff;
     color: white;
+    scroll-snap-align: start;
+}
+
+main .hardskills-scrollable #hardskills div span.bloc-images-competences{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 /* Utilitaire pour les filtres */
@@ -344,17 +525,23 @@ main #web-design, main #app-dev{
 /* Activer le défilement */
 main #web-dev, main #web-design, main #app-dev{
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(320px, 380px); /* Largeur fixe pour défiler horizontalement */
     overflow-x: auto;
     gap: 3rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    padding: 10px 0;
 }
 
-main #web-dev, main #web-design{
+/* main #web-dev, main #web-design{
     grid-template-columns: repeat(2,1fr);
 }
 
 main #app-dev{
     grid-template-columns: repeat(3,1fr);
-}
+} */
 
 /* Mise en forme des blocs en flex et mettre l'arrière-plan des blocs en bleu */
 main #web-dev .projet-item, main #web-design .projet-item, main #app-dev .projet-item{
@@ -370,6 +557,9 @@ main #web-dev .projet-item, main #web-design .projet-item, main #app-dev .projet
     background-color: #007bff;
     color: white;
     border: 1px solid black;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Mettre en forme le header de chaque bloc en flex */
@@ -459,12 +649,19 @@ main #web-dev .projet-item ul, main #web-design .projet-item ul, main #app-dev .
 }
 
 /* EMPLOIS */
+main .panel-emplois-scrollable{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    padding: 10px 0;
+}
+
 main .panel-emplois-scrollable #panel-emplois{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(320px, 380px);
     gap: 3rem;
-    margin: -1px;
-    overflow-x: auto;
 }
 
 main .panel-emplois-scrollable #panel-emplois p strong{
@@ -484,6 +681,14 @@ main .panel-emplois-scrollable #panel-emplois .emploi-item{
     background-color: #007bff;
     color: white;
     border: 1px solid black;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main .panel-emplois-scrollable #panel-emplois .emploi-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* Mettre en forme le header de chaque bloc en flex */

@@ -1,14 +1,107 @@
 /* Personnalisation de mon formulaire */
-#destination-formulaire form{
-    margin: 0 auto;
-    padding: 25px;
-    box-sizing: border-box;
-    max-width: 400px;
-    text-align: center;
+#destination-formulaire{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 3rem auto 5rem auto;
+    align-items: stretch;
+}
+
+@media (max-width: 680px) {
+    #destination-formulaire{
+        overflow-x: auto;
+    }
+}
+
+#destination-formulaire .coordonnees-formulaire, #destination-formulaire form{
     background-color: beige;
-    border-radius: 15px;
-    margin-bottom: 4rem;
-    overflow-x: auto;
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.coordonnees-formulaire {
+    text-align: left;
+}
+
+.coordonnees-formulaire h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 1rem 0;
+}
+
+.coordonnees-formulaire .description-contact {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+}
+
+.liste-coordonnees {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.coordonnee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: #111827;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.coordonnee-item:hover {background-color: #edf5f0;border: 1px solid #e5e7eb;border-radius: 12px;transition: border-color 0.2s ease, background-color 0.2s ease;}
+
+/* Pastille arrondie pour l'icône de contact */
+.icone-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #edf5f0;
+    color: #3b6d56;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* Liens réseaux sociaux en bas à gauche */
+.liens-sociaux {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.social-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    background-color: #edf5f0;
+}
+
+.social-badge:hover {
+    border-color: #3b6d56;
+    background-color: #f9fafb;
+}
+
+.social-badge img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Customiation du titre de mon formulaire */
@@ -16,6 +109,7 @@
     border: none;
     font-size: 2rem;
     font-weight: 500;
+    text-align: center;
 }
 
 /* Personnalisation de mes inputs et mon champ de texte */
